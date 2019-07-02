@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-  <title>好友TA的帖子</title>
+  <title>我的帖子</title>
   <!-- Meta tag Keywords -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8" />
@@ -27,13 +27,13 @@
     }
     .px-lg-5{
       position: fixed;
-      background-image: url(cw/1.jpg);
+      background-image: url(../cw/1.jpg);
       background-size: cover;
       background-repeat: no-repeat;
     }
     .dispear{
       position: relative;
-      z-index: -1;
+      z-../index: -1;
     }
     .container{
       width: 960px;
@@ -83,8 +83,23 @@
       margin:10px 0 10px 20px;
       /*background-color: #22ff04;*/
       border-radius: 20%;
-      background-image: url("cw/HeadPortrait_default.jpg");
+      background-image: url("../cw/setPerson.png");
       background-size: cover;
+    }
+    .setLove{
+      background-image: url("../cw/setLove.png");
+    }
+    .setFocus{
+      background-image: url("../cw/setFocus.png");
+    }
+    .setTiezi{
+      background-image: url("../cw/setTiezi.png");
+    }
+    .setLogout{
+      background-image: url("../cw/setLogout.png");
+    }
+    .setCount{
+      background-image: url("../cw/setCount.png");
     }
     .setTxt{
       float:left;
@@ -142,14 +157,14 @@
   <!-- //Meta tag Keywords -->
 
   <!-- Custom-Files -->
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="../css/bootstrap.css">
   <!-- Bootstrap-Core-CSS -->
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="css/style1.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../css/style1.css" type="text/css" media="all" />
   <!-- Style-CSS -->
   <!-- font-awesome-icons -->
-  <link href="css/font-awesome.css" rel="stylesheet">
-  <link href="css/inline.css" rel="stylesheet">
+  <link href="../css/font-awesome.css" rel="stylesheet">
+  <link href="../css/inline.css" rel="stylesheet">
   <!-- //font-awesome-icons -->
   <!-- /Fonts -->
   <link href="http://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,800" rel="stylesheet">
@@ -167,16 +182,17 @@
       <nav class="py-4">
         <div id="logo">
           <h1>
-            <a href="index.html">PetLovers</a>
+            <a href="../index.html">PetLovers</a>
           </h1>
           <label for="drop" class="toggle">Menu</label>
           <input type="checkbox" id="drop" />
           <ul class="menu mt-2">
-            <li class="active"><a href="index.html"><font size="+3">首页</font></a></li>
-          
-            <li><a href="events.html"><font size="+3" >资讯</font></a></li>
-            <li ><a href="luntan.html"><font size="+3" >论坛</font></a></li>
-            <li><a href="frontpage.html"><img src="./cw/12.jpg"></a></li>
+            <li class="active"><a href="../index.html"><font size="+3">首页</font></a></li>
+           
+            <li ><a href="forum.html"><font size="+3" >论坛</font></a></li>
+                       
+ <li><a href="events.html"><font size="+3" >小贴士</font></a></li>
+            <li><a href="frontpage.html"><img src="../cw/12.jpg"></a></li>
           </ul>
         </div>
       </nav>
@@ -196,23 +212,44 @@
     <div class="left">
       <ul>
         <li>
-          <a href="otherfrontpage.html">
+          <a href="frontpage.html">
             <div class="setIcon"></div>
             <span class="setTxt">个人资料</span>
           </a>
         </li>
 
         <li>
-          <a href="otherfrontpage2.html">
-            <div class="setIcon"></div>
-            <span class="setTxt">宠物资料</span>
+          <a href="frontpage2.html">
+            <div class="setIcon setCount"></div>
+            <span class="setTxt">账号管理</span>
           </a>
         </li>
 
         <li>
-          <a href="otherfrontpage3.html">
-            <div class="setIcon"></div>
-            <span class="setTxt">TA的帖子</span>
+          <a href="frontpage3.html">
+            <div class="setIcon setLove"></div>
+            <span class="setTxt">收藏夹</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="frontpage4.html">
+            <div class="setIcon setFocus"></div>
+            <span class="setTxt">我的关注</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="frontpage5.html">
+            <div class="setIcon setTiezi"></div>
+            <span class="setTxt">我的帖子</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="../index.html">
+            <div class="setIcon setLogout"></div>
+            <span class="setTxt">退出登录</span>
           </a>
         </li>
       </ul>
@@ -223,7 +260,7 @@
         <div class="row">
           <div class="col-md-3">
             <span style="color: rgba(0,0,0,0)">............................................</span>
-            <a href="single.html" style=""><img src="cw/12.jpg" class="Headportrait" alt="user-image" /></a>
+            <a href="single.html" style=""><img src="../cw/12.jpg" class="Headportrait" alt="user-image" /></a>
           </div>
           <div class="col-md-5">
             <a href="single.html" class="title">猫咪死了怎么办？</a><br />
@@ -245,7 +282,7 @@
         <div class="row">
           <div class="col-md-3">
             <span style="color: rgba(0,0,0,0)">............................................</span>
-            <a href="single.html"><img src="cw/12.jpg" class="Headportrait" alt="user-image" /></a>
+            <a href="single.html"><img src="../cw/12.jpg" class="Headportrait" alt="user-image" /></a>
           </div>
           <div class="col-md-5">
             <a href="single.html" class="title">猫咪死了怎么办？</a><br />
@@ -266,7 +303,7 @@
         <div class="row">
           <div class="col-md-3">
             <span style="color: rgba(0,0,0,0)">............................................</span>
-            <a href="single.html"><img src="cw/12.jpg" class="Headportrait" alt="user-image" /></a>
+            <a href="single.html"><img src="../cw/12.jpg" class="Headportrait" alt="user-image" /></a>
           </div>
           <div class="col-md-5">
             <a href="single.html" class="title">猫咪死了怎么办？</a><br />
