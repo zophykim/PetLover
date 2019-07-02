@@ -385,7 +385,7 @@ li > a:only-child:after {
 /*--/banner --*/
 
 .banner-content {
-    background: url(../cw/beagle.jpg)no-repeat center;
+    background: url(../img/beagle.jpg)no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
