@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>个人首页</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .topDiv{
+      width: 900px;
+      height: 180px;
+      /*background-color: #ff3a24;*/
+      margin: 40px auto;
+      position: relative;
+      /*padding-bottom: 10px;*/
+      /*box-sizing: border-box;*/
+      border-bottom: 1px solid #c9c9c9;
+    }
+    .imgDiv{
+      float: left;
+      margin:20px;
+    }
+    .setHeadcut{
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+    }
+    .aBtnChange{
+      position:absolute;
+      width: 100px;
+      height: 40px;
+      top:20px;
+      left:800px;
+      line-height: 40px;
+      text-align: center;
+      border: 2px solid rgba(35, 156, 237, 0.5);
+      background-color: rgba(35, 156, 237, 0.5);
+      border-top-left-radius:40px;
+      border-top-right-radius:40px;
+      border-bottom-left-radius:40px;
+      border-bottom-right-radius:40px;
+      box-shadow: #d8d8d8 3px 3px 10px 2px;
+      /*background-color: #ff0c02;*/
+    }
+    .btnDivFst{
+      float: right;
+      margin: 20px 0;
+    }
+    a{
+      text-decoration: none;
+      font-weight: 500;
+      /*font-size:1rem;*/
+      color: white;
+    }
+    .btnDivFst a span{
+      height: 40px;
+      width: 100px;
+      float: right;
+      text-align: center;
+      border: 2px solid rgba(35, 156, 237, 0.5);
+      background-color: rgba(35, 156, 237, 0.5);
+      border-top-left-radius:40px;
+      border-top-right-radius:40px;
+      border-bottom-left-radius:40px;
+      border-bottom-right-radius:40px;
+      box-shadow: #d8d8d8 3px 3px 10px 2px;
+      line-height: 40px;
+      box-sizing: border-box;
+    }
+    .btnDivSed{
+      float: right;
+      margin: 20px 30px;
+    }
+    /*.btnDivSed a{*/
+    /*text-decoration: none;*/
+    /*font-family:SimSun ;*/
+    /*font-size:1rem;*/
+    /*color: #f0f0f0;*/
+    /*}*/
+    .btnDivSed a span{
+      height: 40px;
+      width: 100px;
+      float: right;
+      text-align: center;
+      border: 1px solid rgba(35, 156, 237, 0.5);
+      background-color: rgba(35, 156, 237, 0.5);
+      border-top-left-radius:40px;
+      border-top-right-radius:40px;
+      border-bottom-left-radius:40px;
+      border-bottom-right-radius:40px;
+      box-shadow: #d8d8d8 3px 3px 10px 2px;
+      line-height: 40px;
+      box-sizing: border-box;
+    }
+    .topDiv-left{
+      width: 500px;
+      height: 80px;
+      float: left;
+      /*background-color: #cdff09;*/
+    }
+    h2{
+      padding: 22px 0 0 0;
+    }
+    .topDiv-right{
+      width: 500px;
+      height: 80px;
+      float: left;
+      /*background-color: #05ff68;*/
+    }
+    .topDiv-right-top{
+      width: 500px;
+      height: 40px;
+      float:left;
+      box-sizing: border-box;
+      /*background-color: #ff3a24;*/
+    }
+    .topDiv-right-top span{
+      float: left;
+      /*color: #f0f0f0;*/
+    }
+    .iconAddr{
+      width: 30px;
+      height: 30px;
+      background-image: url(../img/setPosition.png);
+      background-size: cover;
+      margin:5px 0;
+    }
+    .Addr{
+      width: 60px;
+      height: 30px;
+      margin:6px;
+      border-right: 1px solid #c9c9c9;
+    }
+    .iconSex{
+      width: 20px;
+      height: 20px;
+      background-image: url(../img/male.png);
+      background-size: cover;
+      margin:10px;
+    }
+    .iconBirthday{
+      width: 30px;
+      height: 30px;
+      background-image: url(../img/setBirthday.png);
+      background-size: cover;
+      margin:5px 0 5px 40px;
+      border-left: 1px solid #c9c9c9;
+    }
+    .Birthday{
+      width: 200px;
+      height: 30px;
+      margin:8px;
+    }
+    .topDiv-right-bottom{
+      width: 500px;
+      height: 40px;
+      /*background-color: #80ebc3;*/
+      float:left;
+      padding:20px 0 0 0;
+    }
+  </style>
+  <!-- //Meta tag Keywords -->
+
+  <!-- Custom-Files -->
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <!-- Bootstrap-Core-CSS -->
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../css/style1.css" type="text/css" media="all" />
+  <!-- Style-CSS -->
+  <!-- font-awesome-icons -->
+  <link href="../css/font-awesome.css" rel="stylesheet">
+  <link href="../css/inline.css" rel="stylesheet">
+  <!-- //font-awesome-icons -->
+  <!-- /Fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,800" rel="stylesheet">
+  <!-- //Fonts -->
+</head>
+<body>
+<div class="banner-content1 inner" id="home">
+  <!-- header -->
+  <header class="header">
+    <div class="container-fluid px-lg-5">
+      <!-- nav -->
+      <nav class="py-4">
+        <div id="logo">
+          <h1>
+            <a href="index.html">PetLovers</a>
+          </h1>
+          <label for="drop" class="toggle">Menu</label>
+          <input type="checkbox" id="drop" />
+          <ul class="menu mt-2">
+            <li class="active"><a href="index.html"><font size="+3">首页</font></a></li>
+
+            <li ><a href="luntan.html"><font size="+3" >论坛</font></a></li>
+
+            <li><a href="events.html"><font size="+3" >小贴士</font></a></li>
+            <li><a href="frontpageIndex.html"><img src="../img/12.jpg"></a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- //nav -->
+    </div>
+  </header>
+  <!-- //header -->
+</div>
+<!----------------------------------------------------------------------------------------->
+<div class="topDiv">
+  <div class="imgDiv">
+    <a href="otherpageIndex.html">
+      <img src="../img/1.jpg" alt="240" class="setHeadcut">
+    </a>
+    <a href="frontpage.html" class="aBtnChange"><span>修改资料</span></a>
+  </div>
+
+  <div class="btnDivFst" style="display: none"><a href="#"><span>发消息</span></a></div>
+  <div class="btnDivSed" style="display: none"><a href="#"><span>+ 加关注</span></a></div>
+  <div class="btnDivSed" style="display: none"><a href="#"><span>已关注</span></a></div>
+
+  <div class="topDiv-left">
+    <a href="otherpageIndex.html" style="color: #000"><h2>大佬带我飞</h2></a>
+  </div>
+  <div class="topDiv-right">
+    <div class="topDiv-right-top">
+      <span class="iconAddr"></span>
+      <span class="Addr">重庆</span>
+      <span class="iconSex"></span>
+      <span class="iconBirthday"></span>
+      <span class="Birthday">2019/07/01</span>
+    </div>
+    <div class="topDiv-right-bottom">这里面最多能够放下多少个字呢我具体也不至少所以我现在尝试着</div>
+  </div>
+</div>
+<!------------------------------------------------------------------------------------------------------------>
+<div class="container col-md-8" id="bgcolor" style="width: 900px;">
+  <br />
+  <div class="row">
+
+    <div class="col-md-8">
+      <a href="single.html" class="Ntitle">猫咪死了怎么办？</a><br />
+      <textarea readonly rows="2" cols="40" class="Ntxt">今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了</textarea><br />
+      <a href="single.html" class="Nusername">大佬带我飞</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="Nusername">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><span class="Nusername">点赞：38</span>
+    </div>
+    <div class="col-md-4">
+      <div style="margin-top:10px;float:right;">
+        <a href="single.html"><img src="../img/dead.jpg" class="textpicture" style="height:120px; " alt="user-image" /></a>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:left"><span class="page-header" style="text-align:center; color: #e2e2e2">____________________________________________________________________</span></div>
+</div>
+
+<div class="container col-md-8" id="bgcolor" style="width: 900px;">
+  <br />
+  <div class="row">
+
+    <div class="col-md-8">
+      <a href="single.html" class="Ntitle">猫咪死了怎么办？</a><br />
+      <textarea readonly rows="2" cols="40" class="Ntxt">今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了</textarea><br />
+      <a href="single.html" class="Nusername">大佬带我飞</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="Nusername">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><span class="Nusername">点赞：38</span>
+    </div>
+    <div class="col-md-4">
+      <div style="margin-top:10px;float:right;">
+        <a href="single.html"><img src="../img/dead.jpg" class="textpicture" style="height:120px; " alt="user-image" /></a>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:left"><span class="page-header" style="text-align:center; color: #e2e2e2">____________________________________________________________________</span></div>
+</div>
+
+<div class="container col-md-8" id="bgcolor" style="width: 900px;">
+  <br />
+  <div class="row">
+
+    <div class="col-md-8">
+      <a href="single.html" class="Ntitle">猫咪死了怎么办？</a><br />
+      <textarea readonly rows="2" cols="40" class="Ntxt">今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了</textarea><br />
+      <a href="single.html" class="Nusername">大佬带我飞</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="Nusername">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><span class="Nusername">点赞：38</span>
+    </div>
+    <div class="col-md-4">
+      <div style="margin-top:10px;float:right;">
+        <a href="single.html"><img src="../img/dead.jpg" class="textpicture" style="height:120px; " alt="user-image" /></a>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:left"><span class="page-header" style="text-align:center; color: #e2e2e2">____________________________________________________________________</span></div>
+</div>
+
+<div class="container col-md-8" id="bgcolor" style="width: 900px;">
+  <br />
+  <div class="row">
+
+    <div class="col-md-8">
+      <a href="single.html" class="Ntitle">猫咪死了怎么办？</a><br />
+      <textarea readonly rows="2" cols="40" class="Ntxt">今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了</textarea><br />
+      <a href="single.html" class="Nusername">大佬带我飞</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="Nusername">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><span class="Nusername">点赞：38</span>
+    </div>
+    <div class="col-md-4">
+      <div style="margin-top:10px;float:right;">
+        <a href="single.html"><img src="../img/dead.jpg" class="textpicture" style="height:120px; " alt="user-image" /></a>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:left"><span class="page-header" style="text-align:center; color: #e2e2e2">____________________________________________________________________</span></div>
+</div>
+</body>
+</html>

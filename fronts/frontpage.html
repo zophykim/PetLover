@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>个人资料</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+        //更换头像
+        function chooseImg(file){
+          var file=file.files[0];
+          var reader=new FileReader();
+
+          reader.readAsDataURL(file);
+
+          reader.onload=function(){
+            var img=document.getElementById('Img');
+            img.src=this.result;
+          };
+        }
+    </script>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+    #home{
+      position: fixed;
+    }
+    .px-lg-5{
+      position: fixed;
+      background-image: url(../img/1.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .container{
+      width: 960px;
+      margin:0 auto;
+      /*background-color: #ff0c02;*/
+    }
+    /*left*/
+    .left {
+      width: 270px;
+      margin-top: 180px;
+      /*float:left;*/
+      position: fixed;
+      /*background-color: #05fffa;*/
+    }
+    .left ul li{
+      list-style: none;
+      width: 270px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      /*background-color: purple;*/
+    }
+    .left ul li a{
+      display: block;
+      text-decoration: none;
+      width: 270px;
+      height: 60px;
+      border-bottom: 1px solid rgba(35,156,237,0.5);
+      padding: 5px;
+      box-sizing: border-box;
+      color:#333;
+      font:1rem Arial;
+      line-height: 60px;
+      /*background-color: #05ff68;*/
+    }
+    .left ul li a:visited{
+      background-color: rgba(35,156,237,0.5);
+    }
+    .left ul li a:hover{
+      background-color: rgba(35,156,237,0.5);
+    }
+    .setIcon{
+      width: 32px;
+      height: 32px;
+      float:left;
+      text-align: center;
+      margin:10px 0 10px 20px;
+      /*background-color: #22ff04;*/
+      border-radius: 20%;
+      background-image: url("../img/setPerson.png");
+      background-size: cover;
+    }
+    .setLove {
+      background-image: url("../img/setLove.png");
+    }
+    .setFocus{
+      background-image: url("../img/setFocus.png");
+    }
+    .setTiezi{
+      background-image: url("../img/setTiezi.png");
+    }
+    .setLogout{
+      background-image: url("../img/setLogout.png");
+    }
+    .setCount{
+      background-image: url("../img/setCount.png");
+    }
+    .setTxt{
+      float:left;
+      text-align: left;
+      margin-left:30px;
+      height:50px;
+      font-size: 20px;
+      /*background-color: #97ffff;*/
+    }
+    /*right*/
+    .right{
+      width: 640px;
+      margin-top: 180px;
+      margin-right: 100px;
+      /*background-color: #05fffa;*/
+      float:right;
+    }
+    tr{
+      width: 640px;
+      /*background-color: #ff0c02;*/
+    }
+    /*第一行第一个td*/
+    .top-line{
+      width: 150px;
+      height: 120px;
+      /*background-color: pink;*/
+    }
+    .headImg{
+      width: 100px;
+      height: 100px;
+      /*background-color: #cdff09;*/
+    }
+    /*div*/
+    .headImg img{
+      display:inline-block;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border-color:rgba(35,156,237,0.5);
+      box-shadow: #d8d8d8 3px 3px 10px 2px;
+    }
+    /*第一行第二个td*/
+    .top-line-secd{
+      height: 120px;
+      width: 490px;
+      /*background-color: #ebe987;*/
+    }
+    .chooseBtn{
+      height: 30px;
+      width: 100px;
+      display: inline-block;
+      box-sizing: border-box;
+      line-height: 30px;
+      /*background-color: #03f5ff;*/
+      border: 2px solid rgba(35,156,237,0.5);
+      box-shadow:#d8d8d8 3px 3px 10px 2px ;
+    }
+    .hide{
+      width: 100px;
+      opacity: 0;/*透明度*/
+      position: absolute;
+      /*background-color: #ff0c02;*/
+    }
+    .chooseBtn span{
+      color:rgba(35,156,237,0.5);
+      padding-left: 15px;
+    }
+    .setTitle{
+      width: 150px;
+      height: 70px;
+      color:rgb(150,150,150);
+      font-size: 22px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+    .setCont{
+      width: 490px;
+      height: 70px;
+      /*background-color: #ff0c02;*/
+      border-bottom: 2px solid #f0f0f0;
+    }
+    textarea{
+      width: 500px;
+      height: 200px;
+      font-size: 15px;
+      font-family: SimSun;
+      border: 2px solid #c8c8c8;
+    }
+    .setSName{
+      width: 200px;
+      height: 30px;
+      font-size: 15px;
+      font-family: SimSun;
+      border: 2px solid #c8c8c8;
+    }
+    [type="radio"]{
+      margin:0 5px;
+    }
+    .setCont span{
+      margin:0 5px;
+    }
+    /*最下面的按钮*/
+    .subBtn{
+      width: 640px;
+      height: 70px;
+      margin:50px auto;
+      /*background-color: #ff0c02;*/
+      line-height: 70px;
+    }
+    [type="submit"]{
+      width: 150px;
+      height: 50px;
+      margin: 0 200px;
+      line-height: 50px;
+      font-size: 1rem;
+      font-family: SimSun;
+      color:white;
+      background-color: rgba(35,156,237,0.5);
+      border: 2px solid #c8c8c8;
+      box-shadow:#d8d8d8 3px 3px 10px 2px ;
+      cursor: pointer;
+    }
+  </style>
+    <!-- //Meta tag Keywords -->
+
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../css/style1.css" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="../css/font-awesome.css" rel="stylesheet">
+     <link href="../css/inline.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,800" rel="stylesheet">
+    <!-- //Fonts -->
+</head>
+
+<body>
+    <!-- mian-content -->
+    <!-- //header -->
+    <div class="banner-content1 inner" id="home">
+        <!-- header -->
+           <header class="header">
+            <div class="container-fluid px-lg-5">
+                <!-- nav -->
+                <nav class="py-4">
+                    <div id="logo">
+                        <h1> 
+                        <a href="../index.html">PetLovers</a>
+                        </h1>
+                    <label for="drop" class="toggle">Menu</label>
+                    <input type="checkbox" id="drop" />
+                    <ul class="menu mt-2">
+                        <li class="active"><a href="../index.html"><font size="+3">首页</font></a></li>
+                       
+                        <li ><a href="forum.html"><font size="+3" >论坛</font></a></li>
+                       
+ <li><a href="events.html"><font size="+3" >百科</font></a></li>
+                        <li><a href="frontpage.html"><img src="../img/12.jpg"></a></li>
+                    </ul>
+                    </div>
+                </nav>
+                <!-- //nav -->
+            </div>
+        </header>
+        <!-- //header -->
+			   </div>
+    <!-- //header -->
+    <!--// mian-content -->
+    <!---->    <!---->
+    <!--// mian-content -->
+    <!-- banner -->
+    <section >
+
+      <section >
+
+        <div class="container">
+          <div class="left">
+            <ul>
+              <li>
+                <a href="frontpage.html">
+                  <div class="setIcon"></div>
+                  <span class="setTxt">个人资料</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="frontpage2.html">
+                  <div class="setIcon setCount"></div>
+                  <span class="setTxt">账号管理</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="frontpage3.html">
+                  <div class="setIcon setLove"></div>
+                  <span class="setTxt">收藏夹</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="frontpage4.html">
+                  <div class="setIcon setFocus"></div>
+                  <span class="setTxt">我的关注</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="frontpage5.html">
+                  <div class="setIcon setTiezi"></div>
+                  <span class="setTxt">我的帖子</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="../index.html">
+                  <div class="setIcon setLogout"></div>
+                  <span class="setTxt">退出登录</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="right">
+            <form>
+              <table>
+                <tr>
+                  <td class="top-line">
+                    <div class="headImg">
+                      <img src="../img/HeadPortrait_default.jpg" id="Img"/>
+                    </div>
+                  </td>
+                  <td class="top-line-secd">
+                    <a class="chooseBtn"><input type="file" class="hide" onchange="chooseImg(this)"><span>更改头像</span></a>
+                  </td>
+                </tr>
+
+                <tr class="bottomBorder">
+                  <td class="setTitle">昵称</td>
+                  <td class="setCont">
+                    <input type="text" placeholder="请输入昵称" class="setSName" required>
+                  </td>
+                </tr>
+
+                <tr class="bottomBorder">
+                  <td class="setTitle">性别</td>
+                  <td class="setCont">
+                    <input type="radio" value="1" name="sex">
+                    <span>男</span>
+                    <input type="radio" value="2" name="sex">
+                    <span>女</span>
+                    <input type="radio" value="3" name="sex" checked="checked">
+                    <span>保密</span>
+                  </td>
+                </tr>
+
+                <tr class="bottomBorder">
+                  <td class="setTitle">生日</td>
+                  <td class="setCont">
+                    <!--<input type="password" placeholder="请输入新的密码" class="setSName" required>-->
+                    <input type="date" value="2019-07-01" class="setSName" required>
+                  </td>
+                </tr>
+
+                <tr class="bottomBorder">
+                  <td class="setTitle">电子邮箱</td>
+                  <td class="setCont">
+                    <input type="email" name="userEmail" class="setSName" placeholder="请输入邮箱"  required>
+                  </td>
+                </tr>
+
+                <tr class="bottomBorder">
+                  <td class="setTitle">宠物签名</td>
+                  <td class="setCont">
+                    <!--<input type="text" placeholder="请输入爱宠种属" class="setSName">-->
+                    <textarea>萌宠喜好</textarea>
+                  </td>
+                </tr>
+
+              </table>
+
+              <div class="subBtn">
+                <input type="submit" value="确认提交">
+              </div>
+
+            </form>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
