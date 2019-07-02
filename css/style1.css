@@ -1,5 +1,87 @@
 /* header */
 
+/*-- header --*/
+
+h1.logo a.navbar-brand {
+	font-family: 'Poiret One', cursive;
+	font-size: 1em;
+             padding-left: 10px;
+	letter-spacing: 20px;
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.38);
+	color: #ffffff;
+	margin: 0;
+}
+
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-brand:focus {
+	color: 	#EEB422;
+}
+
+h1.logo a.navbar-brand i {
+	color: #9e07d6;
+	margin-right: 5px;
+}
+
+.top-mid p {
+	display: inline-block;
+	margin-right: 1.5em;
+}
+
+.top-mid p i {
+	color: #9e07d6;
+	margin-right: 0.6em;
+	text-shadow: 2px 1px 1px rgb(114, 161, 247);
+}
+
+.top-header {
+background-color: rgba(56, 56, 56, 0.3) !important;
+	border-bottom: 0px solid #9e07d6;
+	position: absolute;
+	width: 100%;
+	z-index: 9;
+	padding: 0.6em 1.5em;
+}
+
+.top-header .navbar-nav .nav-link,
+.dropdown-item {
+	color: #ffffff;
+	font-size: 15px;
+	letter-spacing: 1px;
+	margin: 0em 0.5em;
+	padding: 8px 25px;
+	font-weight: 500;
+	border: 2px solid transparent;
+	text-shadow: 1px 1px 2px #000000;
+}
+
+.dropdown-item {
+	margin: 0 !important;
+}
+
+.dropdown-menu {
+	background-color: rgba(255, 255, 255, 0.43);
+	padding: 0;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+	color: #000;
+	text-decoration: none;
+	background-color: #ffffff;
+}
+
+.top-header .navbar-nav .show>.nav-link,
+.top-header .navbar-nav .active>.nav-link,
+.top-header .navbar-nav .nav-link.show,
+.top-header .navbar-nav .nav-link.active,
+.top-header .navbar-nav .nav-link:hover {
+	color: #ffffff;
+	text-shadow: 1px 1px 2px #000000;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.67);
+	border-radius: 0px;
+}
+
+/*-- //header --*/
 /*--/banner --*/
 
 .banner-content1 {
@@ -348,4 +430,97 @@
 
 #platecolor:hover{
     background-color: rgba(219, 24, 24, 0.5);
+}
+
+  
+.toop{
+    /* 设置宽度高度背景颜色 */
+    height:20%; /*高度改为自动高度*/
+    width:35%;
+   right: 5%;
+    background:rgb(189, 181, 181);
+    position: fixed; /*固定在顶部*/
+    top: 0;/*离顶部的距离为0*/
+    margin-bottom: 5px;
+}
+.toop ul{
+    /* 清除ul标签的默认样式 */
+    width: auto;/*宽度也改为自动*/
+    list-style-type: none;
+    white-space:nowrap;
+    overflow: hidden;
+    margin-left: 5%;
+    /* margin-top: 0;          */
+    padding: 0;
+
+}
+.toop li {
+    float:left; /* 使li内容横向浮动，即横向排列  */
+    margin-right:2%;  /* 两个li之间的距离*/
+    position: relative;
+    overflow: hidden;
+}
+
+.toop li a{
+   /* 设置链接内容显示的格式*/
+    display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
+    color:white;
+    text-align: center;
+    padding: 3px;
+    overflow: hidden;
+    text-decoration: none; /* 去除下划线 */
+    
+}
+.toop li a:hover{
+    /* 鼠标选中时背景变为黑色 */
+    background-color: #111;
+}
+.toop ul li ul{
+    /* 设置二级菜单 */
+    margin-left: -0.2px;
+    background:rgb(189, 181, 181);
+    position: relative;
+    display: none; /* 默认隐藏二级菜单的内容 */
+
+}
+.toop ul li ul li{
+    /* 二级菜单li内容的显示 */
+    
+    float:none;
+    text-align: center;
+}
+.toop ul li:hover ul{
+    /* 鼠标选中二级菜单内容时 */
+    display: block;
+
+
+
+   
+.container1 {
+    height: 70px;
+    width: 800px;
+    margin: 100px auto 0 auto;
+}
+.parent1 {
+    position: relative;
+}
+.search1 {
+    width: 300px;
+    height: 40px;
+    border-radius: 18px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding-left: 20px;
+    position: absolute;
+}
+.btn1 {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    background: url("images/topbar.png") no-repeat -2px -99px;
+    top: 6px;
+    left: 285px;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
