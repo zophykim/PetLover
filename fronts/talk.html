@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Contact</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="" />
+	<script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+        function getCurrentime(){
+		 var date = new Date();
+         var year=date.getFullYear();
+		 var month=date.getMonth()+1;
+		 var day=date.getDate();
+		 
+  
+		var h = date.getHours(); 
+		var m = date.getMinutes(); 
+        var time = year + '-' + month + "-" + day + " " + h + ':' + m ;
+		
+		return time;
+		
+		
+		}
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+		<!--清空聊天区域-->
+        function clearChatArea()
+		{
+		}
+		<!--消息提醒-->
+        function addMSG(name,url,msg){
+			var add_html="<div class='row messageBox'><img class='col-md-2 row' src='images/'></img><div class='col-md-10 container'><div class='row' >this is name</div><div class='row' >this is message</div></div></div>";
+			var info="<div class='row messageBox'><img class='col-md-3 row photo' style='margin-left:2%;'src='"+url+"'></img>";
+			var info1="<div class='col-md-9 '><div class='row'>"+name+"</div><div class='row' >"+msg+"</div></div></div>";
+		    var message="<div class='row messageBox'><div class='row' style='margin:2%;'><img class='col-md-4 row photo' src='"+url+"'></img><div class='col-md-8'style='margin-top:3%;'><div class='row'style='margin-left:1%;'>"+name+"</div><div class='row' style='margin-left:1%;font-weight:200;' >"+msg+"</div></div></div></div>";
+			
+			//var message=info+info1;
+			$("#messageArea").append(message);
+			
+		}
+		function sendMessage(){
+		  var name="宇宙大大大傻子金成哲";
+		  var time=getCurrentime();
+		  var src="images/te2.jpg";
+		  var text=$("#sendMsg").val();
+		  //var info="<div class='col-md-12 row'><div class='row col-md-4'></div><div class='row col-md-8'style='background-color:green'><div class='row col-md-12'> <div class='col-md-8 row'style='background-color:white;'></div><div class='col-md-2 row'><div class='user'style='position:relative;top:35%;background-color:red'>name</div></div><div class='col-md-2 row'style='background-color:red;'><img class='col-md-12 photo row'src='images/te2.jpg' ></img></div></div><div class='col-md-12'><div class='row' style='background-color:yellow;float:right;'><div class='col-md-2'></div><div class='row'style='background-color:red;'>hello,it is  you my poor</div></div></div></div></div>";
+		  //var info="<div class='row col-md-12 uer' style='width:100%;margin-left:14%;'><div class=' col-md-3'></div><div class=' col-md-9 '><div class='row col-md-12' ><div class='col-md-5 '><div style='position:relative;top:35%;'>"+time+"</div></div><div class='col-md-5 ' ><div class='col-md-12 row' style='position:relative;top:30%;margin-left:70%;'>"+name+"</div></div><img class='col-md-2 row photo'src='"+src+"'></img></div><div class='row col-md-12' ><div class='row col-md-4'></div><div class='row col-md-8'><div class='chatrightside' ><div class='msgItem' style='float:right; margin-right:5%;'>"+text+"</div></div></div></div></div></div>";
+		  var info="<div class='row col-md-12 uer' style='width:100%;margin-left:14%;'><div class=' col-md-2'></div><div class=' col-md-10 '><div class='row col-md-12' ><div class='col-md-5 '><div style='position:relative;top:35%;margin-left:25%;'>"+time+"</div></div><div class='col-md-5 ' ><div style='width:100%;height:100%;position:relative;top:35%;'> <div style='float:right;'>"+name+"</div></div></div><img class='col-md-2 row photo'src='"+src+"'></img></div><div class='row col-md-12' ><div class='row col-md-4'></div><div class='row col-md-8'><div class='chatrightside' ><div class='msgItem' style='float:right; margin-right:5%;'>"+text+"</div></div></div></div></div></div>";
+		  $("#chatMsg").append(info);	
+		}
+		<!--仅文本回显-->
+		function receiveMessage(){
+		var name="宇宙大大白痴金成哲";
+		var imgsrc="images/te2.jpg";
+		var text=$("#sendMsg").val();
+		var time=getCurrentime();
+		addMSG(name,imgsrc,text);
+		info="<div class='row col-md-10'><div class='row col-md-12 user row' ><img src='"+imgsrc+"' class='col-md-2 row photo'></img><div class='col-md-5 row'style='margin-left:5px;'><div class='col-md-12' style='position:relative;top:30%;margin-left:-10px;backgrouud:yellow'>"+name+"</div></div><div class='col-md-5 '><div class='col-md-12'style='position:relative;top:35%;margin-left:6px;'>"+time+"</div></div><div class='row col-md-12' ><div class='msgItem 'style='margin-left:15%;'>"+text+"</div></div></div>";
+
+		//var info="<div class='row col-md-8'><div class='row col-md-12 user'><img src='"+imgsrc+"'class='col-md-2 row photo'></img><div class='col-md-2 row text-center' style='margin-left:5px'>"+name+"</div></div><div class='row col-md-12'><div class='col-md-1'></div><div class='msgItem'>"+text+"</div></div></div>";
+		$("#chatMsg").append(info);	
+		}
+		<!-- 添加html 图片元素-->
+		function Picture(path){
+		var info="<img src='"+path+"'></img>"
+		return info;
+		}
+		<!-- 添加html 文本元素-->
+		function Text(text){
+		var info="<div class='row'>"+text+"</div>";
+		return info;
+		}
+		<!-- 在界面回显发送信息-->
+		function showMSG(message){
+			var name="121";
+			var imgsrc="images/a";
+			var info="<div class='row col-md-8'><div class='row col-md-12'><img src='"+imgsrc+"'class='col-md-2 photo'></img><div class='col-md-2'>"+name+"</div></div><div class='row col-md-12'><div class='col-md-1'></div><div class='col-md-11 msgItem'>"+message+"</div></div></div>";
+			$("#chatMsg").append(info);
+		}
+    </script>
+    <!-- //Meta tag Keywords -->
+
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/style1.css" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,800" rel="stylesheet">
+    <!-- //Fonts -->
+	<style>
+	
+	.senderMSG{
+	padding:1px;
+	border-radius:10px 10px 10px 10px;
+	background-color:#FFFFFF;
+	 text-align:right;
+	}
+
+	.messageBox div{
+	overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
+	 
+	}
+	.messageBox:hover{
+	
+      background-color:#EDEDED;	
+	}
+	.frag{
+	padding:0;
+	margin-right:0;
+	border: 1px solid #EDEDED;
+	}
+	.msgfrag{
+	padding-left:0;
+	}
+	.user{
+	height:10%;
+	}
+	.msgItem{
+	    height: auto;  
+        word-wrap:break-word;  
+		word-break:break-all;  
+		overflow: hidden
+		width:auto;
+	    margin:0.5em 0;
+		padding:5px;
+		padding-left:6px;
+		border-radius:10px;
+		background-color:#FFFFFF;
+	}
+	.photo{
+	border-radius:50%;
+	height:100%;
+	witdth:50%;
+	}
+	.chatrightside{
+	width:100%;
+	height:50%;
+	}
+	
+	</style>
+</head>
+<body>
+    <!-- mian-content -->
+    <!--下面是导航区域 -->
+    <div class="banner-content1 inner" id="home">
+        <!-- header -->
+           <header class="header">
+             <div class="container-fluid px-lg-5">
+                <!-- nav -->
+                <nav class="py-4">
+                    <div id="logo">
+                        <h1> <a href="index.html">PetLovers</a></h1>
+                    <label for="drop" class="toggle">Menu</label>
+                    <input type="checkbox" id="drop" />
+					<ul class="menu mt-2">
+                        <li class="active"><a href="index.html"><font size="+3" >首页</font></a></li>
+                        <li ><a href="about.html"><font size="+3" >XX</font></a></li>
+						<li><a href="events.html"><font size="+3" >资讯</font></a></li>
+                        <li ><a href="luntan.html"><font size="+3" >论坛</font></a></li>
+						<li><a href="personal.html"><img src="./cw/12.jpg"></a></li>
+                    </ul>
+					</div>
+                </nav>  
+			</div>
+        </header>	   
+     </div>
+   <!--下面是消息和聊天区域-->
+    <section class="container">
+	    <div class="row">
+			<div class="col-md-4"> 
+					消息
+			</div>
+			<div class="col-md-8"><div class="text-center">聊天记录</div></div>
+		</div>
+		
+	    <div class="row">
+		<!--这是左边消息的区域-->
+			<div class="col-md-4 frag">
+				<textarea class="col-md-12 "style="overflow-x:hidden;" readonly="readonly" id="messageArea" cols="10" rows="20"></textarea>
+			</div>
+		<!--下面是聊天记录的区域-->
+			<div class="col-md-8">
+				<div class="container msgfrag">
+					<div>
+						<textarea class="form-control" cols="20" rows="20" disabled="disabled" id="chatMsg" style="overflow-x:hidden;"></textarea>
+					</div>
+					<div>
+						this is function area（photo）
+					</div >
+					<div class="form-group">
+						<textarea class="form-control" cols="20" rows="5" id="sendMsg"></textarea>
+					</div>
+					<button type="button" class="btn btn-primary" id="sendbtn" onclick="sendMessage()">发送</button>
+					<button type="button" class="btn btn-primary" id="receivebtn" onclick="receiveMessage()">接收</button>
+				</div>
+			</div>
+		</div>
+     <!--下面是添加的聊天元素-->
+<div class="row col-md-12 uer" style="width:100%;">
+		<div class=" col-md-4"style="background-color:pink">blank</div>
+		<div class=" col-md-8 "style="background-color:green">
+			<div class="row col-md-12" style="background-color:red;">
+				<div class="col-md-5"><div style="position:relative;top:35%;">time</div></div>
+				<div class="col-md-5 " style="background-color:blue;">					
+					<div style="width:height;height:50%;position:relative;top:35%;background-color:yellow;"> <div style="float:right;">name</div></div>					
+				</div>
+				<img class="col-md-2 row photo"src="images/te2.jpg"></img>
+			</div>
+		</div>	
+			<div class="row col-md-12" >
+				<div class="row col-md-4"></div>
+				<div class="row col-md-8"style="background-color:pink;">
+					<div class="chatrightside" ><div class="msgItem" style="float:right;">hello</div></div>
+				</div>
+			</div>	
+	</div>
+
+<div class="row col-md-12 uer" style="width:100%;margin-left:14%;">
+	<div class=" col-md-3"></div>
+	<div class=" col-md-9 ">
+		<div class="row col-md-12" >
+			<div class="col-md-5 ">
+				<div style="position:relative;top:35%;">time</div>
+			</div>
+		<div class="col-md-5 " >
+			<div style="width:height;height:50%;position:relative;top:35%;background-color:yellow;"> <div style="float:right;">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div></div>
+			
+		</div>
+		<img class="col-md-2 row photo"src="images/te2.jpg"></img>
+		</div>
+		<div class="row col-md-12" >
+			<div class="row col-md-4"></div>
+			<div class="row col-md-8">
+				<div class="chatrightside" >
+					<div class="msgItem" style="float:right; margin-right:5%;">text</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row col-md-9">
+<div class="row col-md-12 user row" style="background-color:red;">
+	<img src="images/te2.jpg"class="col-md-2 row photo"></img>
+	<div class="col-md-5 row"style="margin-left:5px;background-color:blue;">
+		<div class="col-md-12" style="position:relative;top:40%;">name</div>
+	</div>
+	<div class="col-md-5">
+		<div style="position:relative;top:35%;margin-left:40%;padding-left:10%;">2019-7-2 14:36</div>
+	</div>
+	<div class="row col-md-12" style="background-color:yellow;">
+		<div class="col-md-2 row"></div>
+	    <div class="col-md-10 row msgItem">textaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+	</div>
+</div>
+</div>
+
+	</section>
+
+  
+
+    <!-- //contact -->
+     <!--footer -->
+     <footer>
+        <section class="footer footer_1its py-5">
+            <div class="container py-md-4">
+                <div class="row footer-top mb-md-5 mb-4">
+                    <div class="col-lg-4 col-md-6 footer-grid_section_1its">
+                        <div class="footer-title-w3ls">
+                            <h3>网站介绍：宠物情缘</h3>
+                        </div>
+                        <div class="footer-text">
+                            <p>为您找到爱宠</p>
+                            <p>为您的爱宠找到伙伴</p>
+                            <p>让您了解您的爱宠 </p>
+                            <p>帮您分享您爱宠的点点滴滴</p>
+                        </div>
+                    </div>
+				<div class="col-lg-4 col-md-12 mt-lg-0 mt-4 col-sm-12 footer-grid_section_1its">
+					<div class="footer-title-w3ls">
+						<h3></h3>
+					</div>
+                    <div class="footer-text">
+                         <p>你可以在这里快速跳转到包含您搜索信息界面的网页：</p>
+					</div>
+                 </div>
+					<div class="col-lg-4 col-md-12 mt-lg-0 mt-4 col-sm-12 footer-grid_section_1its">
+						<div class="footer-title-w3ls"> </div>
+                        <div class="footer-text">
+						<form action="#" method="post">
+								<input type="email" name="Email" placeholder="查找" required="">
+                                <button class="btn1 btn"><span class="fa fa-paper-plane-o" aria-hidden="true"></span></button>
+                                <div class="clearfix"> </div>
+                        </form>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- //footer -->
+    <!-- copyright -->
+    <div class="cpy-right text-center py-3">
+        <p class="">宠物情缘XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+    </div>
+</body>
+</html>
