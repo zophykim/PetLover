@@ -70,10 +70,28 @@
     <!--// mian-content -->
     <!-- banner -->
     <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <img src="../img/dog.jpg" class="textpicture" style="height: 120px; margin: 20px" alt="user-image" />
+                    <span style="font-size:60px; ">宠物狗</span>
+                    <br />
+                    <div style="margin-left:170px; margin-top:-50px">
+                        <span>帖子数: </span> <span>56</span>
+                        <span style="color :rgba(0,0,0,0)">...</span>
+                        <span>浏览量: </span> <span>121</span>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                </div>
+            </div>
+        </div>
+
         <div class="row" style="margin-top: 15px"></div>
         <div class="container">
             <div class="row">
-                <div class="container col-md-8">
+                <div class="container col-md-5">
                     <br />
                     <button class="toSent" id="plate0" onclick="plate0()" style="color: rgba(35, 156, 237, 0.5); Background: rgba(0,0,0,0); "><span style="color :rgba(0,0,0,0)">.</span><span>板块</span><span style="color :rgba(0,0,0,0)">.</span></button>
                     <span style="color :rgba(0,0,0,0)">....</span>
@@ -84,7 +102,15 @@
                     <button class="toSent" id="plate3" onclick="plate3()" style="color: rgba(35, 156, 237, 0.5); Background: rgba(0,0,0,0); "><span style="color :rgba(0,0,0,0)">.</span><span>领养</span><span style="color :rgba(0,0,0,0)">.</span></button>
                     <span style="color :rgba(0,0,0,0)">....</span>
                     <button class="toSent" id="plate4" onclick="plate4()" style="color: rgba(35, 156, 237, 0.5); Background: rgba(0,0,0,0); "><span style="color :rgba(0,0,0,0)">.</span><span>疾病</span><span style="color :rgba(0,0,0,0)">.</span></button>
-                    <span style="color :rgba(0,0,0,0)">....</span>
+
+                </div>
+                <div class="container col-md-2">
+                    <div class="row">
+                        <textarea placeholder="输入搜索内容" rows="1" cols="25" style="margin-left:-65px; margin-top:30px;"></textarea>
+                    </div>
+                </div>
+                <div class="container col-md-1">
+                    <img src="../img/search.png" style="height: 24px; margin-top:33px; margin-left:-60px;" alt="user-image" />
                 </div>
                 <div class="container col-md-3">
                     <div style="text-align:center;margin-top:10px;">
@@ -105,7 +131,7 @@
                     <div class="row">
 
                         <div class="col-md-8">
-                            <a href="forums.html" class="Ntitle">猫咪死了怎么办？</a><br />
+                            <a href="single.html" class="Ntitle">猫咪死了怎么办？</a><br />
                             <textarea readonly rows="2" cols="40" class="Ntxt">今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了</textarea><br />
                             <a href="single.html" class="Nusername">大佬带我飞</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="Nusername">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><span class="Nusername">点赞：38</span>
                         </div>
@@ -127,9 +153,9 @@
                         </div>
                     </div>
                     <div style="text-align: right; margin-right: 15px; margin-top: 15px; color: #4d4d4d">
-                        <img src="../img/position.png" style="height:18px; margin-top:-2px; "/><span> </span><span>重庆</span><span style="color :rgba(0,0,0,0)">....</span><span><img src="../img/female.png" style="height:18px; margin-top:-2px; " /></span><span style="color :rgba(0,0,0,0)">....</span><a><img src="../img/reminder.png" style="height:18px; margin-top:-2px; " /></a><span> </span><a>23</a><span style="color :rgba(0,0,0,0)">....</span><a><img src="../img/people.png" style="height:25px; margin-top:-2px; " /></a><span> </span><a>38</a>
+                        <img src="../img/position.png" style="height:18px; margin-top:-2px; " /><span> </span><span>重庆</span><span style="color :rgba(0,0,0,0)">....</span><span><img src="../img/female.png" style="height:18px; margin-top:-2px; " /></span><span style="color :rgba(0,0,0,0)">....</span><a><img src="../img/reminder.png" style="height:18px; margin-top:-2px; " /></a><span> </span><a>23</a><span style="color :rgba(0,0,0,0)">....</span><a><img src="../img/people.png" style="height:25px; margin-top:-2px; " /></a><span> </span><a>38</a>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -187,12 +213,12 @@
                     <div style="text-align:left"><span class="page-header" style="text-align:center; color: #e2e2e2">____________________________________________________________________</span></div>
                 </div>
                 <div class="container col-md-3">
-                    
+
                 </div>
             </div>
         </div>
         <div id="post3"></div>
-               
+
         <!--<div class="container">
             <div class="row">
                 <div class="container col-md-8" id="bgcolor">
@@ -206,7 +232,7 @@
                         </div>
                         <div class="col-md-4">
                             <div style="margin-top:10px">
-                                <a href="single.html"><img src="../img/dead.jpg" class="textpicture" style="height:120px; " alt="user-image" /></a>
+                                <a href="single.html"><img src="img/dead.jpg" class="textpicture" style="height:120px; " alt="user-image" /></a>
                             </div>
                         </div>
                     </div>
@@ -217,8 +243,8 @@
                 </div>
             </div>
         </div>-->
-        
-        
+
+
     </section>
     <br />
     <div class="row">
@@ -232,35 +258,35 @@
         <div class="col-md-6"></div>
     </div>
     <br />
-    	<section class="container sendpost funclist" style="background-color: white">
-	
-	<div style="display:block" class="col-md-12">
-		
-	    <div class="form-group">
-			<textarea class="form-control" cols="30"rows="1" placeholder="添加帖子标题"></textarea>
-		</div>
-		
-	</div>
-    <div style="display:block" class="col-md-12">
-        <div class="container">
-            <div class="row">
-                <div>
-                    <ul class="nav nav-pills">
-                        <li class="chat"><button style="background: rgba(0, 0, 0, 0);border:none;"><span aria-hidden="true"></span>图片</button></li>
-                        <li class="chat"><button style="background: rgba(0, 0, 0, 0);border:none;"><span aria-hidden="true"></span>表情</button></li>
-                    </ul>
+    <section class="container sendpost funclist" style="background-color: white">
+
+        <div style="display:block" class="col-md-12">
+
+            <div class="form-group">
+                <textarea class="form-control" cols="30" rows="1" placeholder="添加帖子标题"></textarea>
+            </div>
+
+        </div>
+        <div style="display:block" class="col-md-12">
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <ul class="nav nav-pills">
+                            <li class="chat"><button style="background: rgba(0, 0, 0, 0);border:none;"><span aria-hidden="true"></span>图片</button></li>
+                            <li class="chat"><button style="background: rgba(0, 0, 0, 0);border:none;"><span aria-hidden="true"></span>表情</button></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="form-group">
-            <textarea class="form-control" cols="30" rows="6" placeholder="输入帖子内容"></textarea><br />
-            <button class="toSent" id="Btn_send" style="color: white;" onclick="readMore()"><span style="color :rgba(0,0,0,0)">.</span>发帖<span style="color :rgba(0,0,0,0)">.</span></button>
-        </div>
-        
+            <div class="form-group">
+                <textarea class="form-control" cols="30" rows="6" placeholder="输入帖子内容"></textarea><br />
+                <button class="toSent" id="Btn_send" style="color: white;" onclick="readMore()"><span style="color :rgba(0,0,0,0)">.</span>发帖<span style="color :rgba(0,0,0,0)">.</span></button>
+            </div>
 
-    </div> 
-	
-</section>
+
+        </div>
+
+    </section>
 
     <!-- //contact -->
      <!--footer -->
