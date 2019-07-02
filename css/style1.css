@@ -3,7 +3,7 @@
 /*--/banner --*/
 
 .banner-content1 {
-    background: url(../cw/beagle.jpg)no-repeat center;
+    background: url(../img/beagle.jpg)no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -14,7 +14,7 @@
 }
 
 .banner-content1.inner {
-    background: url(../cw/1.jpg)no-repeat 0px 0px;
+    background: url(../img/1.jpg)no-repeat 0px 0px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -187,6 +187,10 @@
     color:white;
     box-shadow: #d8d8d8 3px 3px 10px 2px ;
     border-color: rgba(219, 24, 24, 0.5);
+    border-top-left-radius:40px;
+    border-top-right-radius:40px;
+    border-bottom-left-radius:40px;
+    border-bottom-right-radius:40px;
 }
 
 
@@ -310,4 +314,34 @@
 }
 #denglu:focus{
     outline: none;
+}
+
+#plates {
+    margin:20px auto;
+    background: white;
+    border:1px solid darkslategray;
+    box-shadow: #d8d8d8 3px 3px 10px 2px ;
+    border:none;
+}
+
+.subPlates {
+    padding:5px;
+    font-size: 16px;
+    background: white;
+    border:1px solid darkslategray;
+    box-shadow: #d8d8d8 3px 3px 10px 2px ;
+    border:none;
+    border-top-left-radius:40px;
+    border-top-right-radius:40px;
+    border-bottom-left-radius:40px;
+    border-bottom-right-radius:40px;
+}
+
+.plateTitle {
+    padding: 20px;
+    font-size:40px;
+}
+
+#platecolor:hover{
+    background-color: rgba(219, 24, 24, 0.5);
 }
