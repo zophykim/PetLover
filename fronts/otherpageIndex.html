@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -101,13 +101,7 @@
       float: left;
       /*color: #f0f0f0;*/
     }
-    .iconAddr{
-      width: 30px;
-      height: 30px;
-      background-image: url(../img/setPosition.png);
-      background-size: cover;
-      margin:5px 0;
-    }
+    
     .Addr{
       width: 60px;
       height: 30px;
@@ -203,23 +197,24 @@
   </a>
   </div>
 
-  <div class="btnDivFst"><a href="#"><span>发消息</span></a></div>
-  <div class="btnDivSed" id="AddCheck" onclick="Checked()"><a href="#"><span>+ 关注</span></a></div>
-  <div class="btnDivSed" id="CancleCheck" style="display: none" onclick="UnChecked()"><a href="#"><span>已关注</span></a></div>
+  <div><a href="#" class="toSent" style="float: right; margin: 20px 30px;"><span style="color :rgba(0,0,0,0)">..</span><span>发消息</span><span style="color :rgba(0,0,0,0)">..</span></a></div>
+  <div id="AddCheck" onclick="Checked()"><a href="#" class="toSent" style="float: right; margin: 20px 30px;"><span style="color :rgba(0,0,0,0)">..</span><span>+ 关注</span><span style="color :rgba(0,0,0,0)">..</span></a></div>
+  <div id="CancleCheck" style="display: none" onclick="UnChecked()"><a href="#" class="toSent" style="float: right; margin: 20px 30px;"><span style="color :rgba(0,0,0,0)">..</span><span>已关注</span><span style="color :rgba(0,0,0,0)">..</span></a></div>
 
   <div class="topDiv-left">
     <a href="otherpageIndex.html" style="color: #000"><h2>大佬带我飞</h2></a>
   </div>
   <div class="topDiv-right">
     <div class="topDiv-right-top">
-      <span class="iconAddr"></span>
-      <span class="Addr"></span>
-      <span class="iconSexM"></span>
-      <span class="iconSexF"></span>
-      <span class="iconBirthday"></span>
-      <span class="Birthday">2019/07/01</span>
+        <div class="row" style="margin-top:5px;">
+            <span style="color :rgba(0,0,0,0)">....</span>
+            <img src="../img/position.png" style="height:18px; margin-top:2px; " /><span style="color :rgba(0,0,0,0)">.</span><span>重庆</span><span style="color :rgba(0,0,0,0)">....</span>
+            <span><img src="../img/female.png" style="height:18px; margin-top:-2px; " /></span><span style="color :rgba(0,0,0,0)">....</span>
+            <a><img src="../img/setBirthday.png" style="height:22px; margin-top:-2px; " /></a><span> </span><a>2019/07/01</a>
+           
+        </div>
     </div>
-    <div class="topDiv-right-bottom">这个人没有填简介啊~~</div>
+    <div class="topDiv-right-bottom" style="margin-top:-5px;">这个人没有填简介啊~~</div>
   </div>
 </div>
 <!--------------------------------------------------------------------------------------------------------------->

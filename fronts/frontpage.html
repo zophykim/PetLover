@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zxx">
 
 <head>
@@ -204,7 +204,7 @@
       /*background-color: #ff0c02;*/
       line-height: 70px;
     }
-    [type="submit"]{
+    /*[type="submit"]{
       width: 150px;
       height: 50px;
       margin: 0 200px;
@@ -216,7 +216,7 @@
       border: 2px solid #c8c8c8;
       box-shadow:#d8d8d8 3px 3px 10px 2px ;
       cursor: pointer;
-    }
+    }*/
   </style>
     <!-- //Meta tag Keywords -->
 
@@ -328,7 +328,7 @@
                     </div>
                   </td>
                   <td class="top-line-secd">
-                    <a class="chooseBtn"><input type="file" class="hide" onchange="updateHeadImagPath(this)"><span>更改头像</span></a>
+                    <a class="toSent" style="color:white; "><input style="cursor: pointer;" type="file" class="hide" onchange="updateHeadImagPath(this)"><span style="color :rgba(0,0,0,0)">..</span><span>更改头像</span><span style="color :rgba(0,0,0,0)">..</span></a>
                   </td>
                 </tr>
 
@@ -376,8 +376,8 @@
 
               </table>
 
-              <div class="subBtn">
-                <input type="submit" value="确认提交">
+              <div>
+                  <input class="toSent" style="cursor: pointer; margin-left:200px; margin-top:20px;" type="submit" value="  确认提交  ">
               </div>
 
             </form>
