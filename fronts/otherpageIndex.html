@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>个人首页</title>
+  <script type="text/javascript" src="../js/otherpageIndex.js"></script>
   <style>
     *{
       margin: 0;
@@ -110,15 +111,24 @@
     .Addr{
       width: 60px;
       height: 30px;
-      margin:6px;
+      margin:10px 6px 6px 6px;
       border-right: 1px solid #c9c9c9;
     }
-    .iconSex{
+    .iconSexM{
       width: 20px;
       height: 20px;
       background-image: url(../img/male.png);
       background-size: cover;
       margin:10px;
+    }
+    .iconSexF{
+      width: 20px;
+      height: 20px;
+      background-image: url(../img/female.png);
+      background-size: cover;
+      margin:10px;
+      display: none;
+      /*display: inline-block;*/
     }
     .iconBirthday{
       width: 30px;
@@ -194,8 +204,8 @@
   </div>
 
   <div class="btnDivFst"><a href="#"><span>发消息</span></a></div>
-  <div class="btnDivSed"><a href="#"><span>+ 加关注</span></a></div>
-  <div class="btnDivSed" style="display: none"><a href="#"><span>已关注</span></a></div>
+  <div class="btnDivSed" id="AddCheck" onclick="Checked()"><a href="#"><span>+ 关注</span></a></div>
+  <div class="btnDivSed" id="CancleCheck" style="display: none" onclick="UnChecked()"><a href="#"><span>已关注</span></a></div>
 
   <div class="topDiv-left">
     <a href="otherpageIndex.html" style="color: #000"><h2>大佬带我飞</h2></a>
@@ -203,12 +213,13 @@
   <div class="topDiv-right">
     <div class="topDiv-right-top">
       <span class="iconAddr"></span>
-      <span class="Addr">重庆</span>
-      <span class="iconSex"></span>
+      <span class="Addr"></span>
+      <span class="iconSexM"></span>
+      <span class="iconSexF"></span>
       <span class="iconBirthday"></span>
       <span class="Birthday">2019/07/01</span>
     </div>
-    <div class="topDiv-right-bottom">这里面最多能够放下多少个字呢我具体也不至少所以我现在尝试着</div>
+    <div class="topDiv-right-bottom">这个人没有填简介啊~~</div>
   </div>
 </div>
 <!--------------------------------------------------------------------------------------------------------------->
@@ -218,7 +229,7 @@
 
     <div class="col-md-8">
       <a href="single.html" class="Ntitle">猫咪死了怎么办？</a><br />
-      <textarea readonly rows="2" cols="40" class="Ntxt">今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了</textarea><br />
+      <textarea readonly rows="2" cols="70" class="Ntxt">今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了</textarea><br />
       <a href="single.html" class="Nusername">大佬带我飞</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="Nusername">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><span class="Nusername">点赞：38</span>
     </div>
     <div class="col-md-4">
@@ -236,7 +247,7 @@
 
     <div class="col-md-8">
       <a href="single.html" class="Ntitle">猫咪死了怎么办？</a><br />
-      <textarea readonly rows="2" cols="40" class="Ntxt">今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了</textarea><br />
+      <textarea readonly rows="2" cols="70" class="Ntxt">今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了</textarea><br />
       <a href="single.html" class="Nusername">大佬带我飞</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="Nusername">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><span class="Nusername">点赞：38</span>
     </div>
     <div class="col-md-4">
@@ -254,7 +265,7 @@
 
     <div class="col-md-8">
       <a href="single.html" class="Ntitle">猫咪死了怎么办？</a><br />
-      <textarea readonly rows="2" cols="40" class="Ntxt">今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了</textarea><br />
+      <textarea readonly rows="2" cols="70" class="Ntxt">今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了</textarea><br />
       <a href="single.html" class="Nusername">大佬带我飞</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="Nusername">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><span class="Nusername">点赞：38</span>
     </div>
     <div class="col-md-4">
@@ -272,7 +283,7 @@
 
     <div class="col-md-8">
       <a href="single.html" class="Ntitle">猫咪死了怎么办？</a><br />
-      <textarea readonly rows="2" cols="40" class="Ntxt">今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了</textarea><br />
+      <textarea readonly rows="2" cols="70" class="Ntxt">今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了</textarea><br />
       <a href="single.html" class="Nusername">大佬带我飞</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="Nusername">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><span class="Nusername">点赞：38</span>
     </div>
     <div class="col-md-4">

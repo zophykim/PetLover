@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8" />
   <meta name="keywords" content="" />
+  <script type="text/javascript" src="../js/frontpage5.js"></script>
   <script>
     addEventListener("load", function() {
       setTimeout(hideURLbar, 0);
@@ -24,6 +25,7 @@
     }
     #home{
       position: fixed;
+      z-index: 999;
     }
     .px-lg-5{
       position: fixed;
@@ -31,10 +33,10 @@
       background-size: cover;
       background-repeat: no-repeat;
     }
-    .dispear{
-      position: relative;
-      z-../index: -1;
-    }
+    /*.dispear{*/
+      /*position: relative;*/
+      /*z-index: -1;*/
+    /*}*/
     .container{
       width: 960px;
       margin:0 auto;
@@ -114,8 +116,27 @@
       width: 640px;
       margin-top: 180px;
       margin-right: 100px;
-      /*background-color: #05fffa;*/
+      /*background-color: #ff3a24;*/
       float:right;
+      position: relative;
+      z-index:-1;
+    }
+    .LIsTW{
+      width: 900px;
+      /*background-color: #cdff09;*/
+      border-bottom: 1px solid #c9c9c9;
+      padding-bottom: 20px;
+      position: relative;
+      z-index: 100;
+    }
+
+    .LIsTB{
+      width: 900px;
+      background-color: rgba(225, 225, 225,0.7);
+      border-bottom: 1px solid #c9c9c9;
+      padding-bottom: 20px;
+      position: relative;
+      z-index: 100;
     }
     tr{
       width: 640px;
@@ -254,71 +275,149 @@
         </li>
       </ul>
     </div>
-    <div class="right">
-      <div class="container dispear" id="bgcolor">
-        <br/>
-        <div class="row">
-          <div class="col-md-3">
-            <span style="color: rgba(0,0,0,0)">............................................</span>
-            <a href="single.html" style=""><img src="../img/12.jpg" class="Headportrait" alt="user-image" /></a>
+    <div class="right" >
+      <div class="LIsTW" onmouseover="ChangeBkcB(this)" onmouseout="ChangeBkcW(this)">
+          <div class="container col-md-8"  style="width: 900px;">
+          <br />
+          <div class="row" style="width: 900px;margin-left:-165px;">
+
+            <div class="col-md-8" style="float: left;position: relative;z-index: 200">
+              <a href="single.html" class="Ntitle">猫咪死了怎么办？</a><br />
+              <textarea readonly rows="2" cols="70" class="Ntxt">今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了</textarea><br />
+              <a href="single.html" class="Nusername">大佬带我飞</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="Nusername">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><span class="Nusername">点赞：38</span>
+            </div>
+            <div class="col-md-4" style="float: right;position: relative;z-index: 200">
+              <div style="margin-top:10px;float:right;">
+                <a href="single.html"><img src="../img/dead.jpg" class="textpicture" style="height:120px;" alt="user-image" /></a>
+              </div>
+            </div>
           </div>
-          <div class="col-md-5">
-            <a href="single.html" class="title">猫咪死了怎么办？</a><br />
-            <a href="single.html" class="username">大佬带我飞</a><br />
-            <a href="single.html" class="txt">今天早上起来发现猫咪被我压死了</a>
-          </div>
-          <div class="col-md-4">
-            <span class="title"></span><br />
-            <a href="single.html" class="username">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="username">点赞：38</a><br />
-            <span class="txt"></span>
-          </div>
-        </div>
-        <div style="text-align:center"><span class="page-header" style="text-align:center; color: #e2e2e2">___________________________________________________________________________________________________________________________________</span>
+          <!--<div style="text-align:left"><span class="page-header" style="text-align:center; color: #e2e2e2">____________________________________________________________________</span></div>-->
         </div>
       </div>
 
-      <div class="container dispear" id="bgcolor">
-        <br/>
-        <div class="row">
-          <div class="col-md-3">
-            <span style="color: rgba(0,0,0,0)">............................................</span>
-            <a href="single.html"><img src="../img/12.jpg" class="Headportrait" alt="user-image" /></a>
+      <div class="LIsTW" onmouseover="ChangeBkcB(this)" onmouseout="ChangeBkcW(this)">
+        <div class="container col-md-8"  style="width: 900px;">
+          <br />
+          <div class="row" style="width: 900px;margin-left:-165px;">
+
+            <div class="col-md-8" style="float: left;">
+              <a href="single.html" class="Ntitle">猫咪死了怎么办？</a><br />
+              <textarea readonly rows="2" cols="70" class="Ntxt">今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了</textarea><br />
+              <a href="single.html" class="Nusername">大佬带我飞</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="Nusername">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><span class="Nusername">点赞：38</span>
+            </div>
+            <div class="col-md-4" style="float: right;">
+              <div style="margin-top:10px;float:right;">
+                <a href="single.html"><img src="../img/dead.jpg" class="textpicture" style="height:120px;" alt="user-image" /></a>
+              </div>
+            </div>
           </div>
-          <div class="col-md-5">
-            <a href="single.html" class="title">猫咪死了怎么办？</a><br />
-            <a href="single.html" class="username">大佬带我飞</a><br />
-            <a href="single.html" class="txt">今天早上起来发现猫咪被我压死了</a>
-          </div>
-          <div class="col-md-4">
-            <span class="title"></span><br />
-            <a href="single.html" class="username">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="username">点赞：38</a><br />
-            <span class="txt"></span>
-          </div>
+          <!--<div style="text-align:left"><span class="page-header" style="text-align:center; color: #e2e2e2">____________________________________________________________________</span></div>-->
         </div>
-        <div style="text-align:center"><span class="page-header" style="text-align:center; color: #e2e2e2">___________________________________________________________________________________________________________________________________</span></div>
       </div>
 
-      <div class="container dispear" id="bgcolor">
-        <br/>
-        <div class="row">
-          <div class="col-md-3">
-            <span style="color: rgba(0,0,0,0)">............................................</span>
-            <a href="single.html"><img src="../img/12.jpg" class="Headportrait" alt="user-image" /></a>
+      <div class="LIsTW" onmouseover="ChangeBkcB(this)" onmouseout="ChangeBkcW(this)">
+        <div class="container col-md-8"  style="width: 900px;">
+          <br />
+          <div class="row" style="width: 900px;margin-left:-165px;">
+
+            <div class="col-md-8" style="float: left;">
+              <a href="single.html" class="Ntitle">猫咪死了怎么办？</a><br />
+              <textarea readonly rows="2" cols="70" class="Ntxt">今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了</textarea><br />
+              <a href="single.html" class="Nusername">大佬带我飞</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="Nusername">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><span class="Nusername">点赞：38</span>
+            </div>
+            <div class="col-md-4" style="float: right;">
+              <div style="margin-top:10px;float:right;">
+                <a href="single.html"><img src="../img/dead.jpg" class="textpicture" style="height:120px;" alt="user-image" /></a>
+              </div>
+            </div>
           </div>
-          <div class="col-md-5">
-            <a href="single.html" class="title">猫咪死了怎么办？</a><br />
-            <a href="single.html" class="username">大佬带我飞</a><br />
-            <a href="single.html" class="txt">今天早上起来发现猫咪被我压死了</a>
-          </div>
-          <div class="col-md-4">
-            <span class="title"></span><br />
-            <a href="single.html" class="username">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="username">点赞：38</a><br />
-            <span class="txt"></span>
-          </div>
+          <!--<div style="text-align:left"><span class="page-header" style="text-align:center; color: #e2e2e2">____________________________________________________________________</span></div>-->
         </div>
-        <div style="text-align:center"><span class="page-header" style="text-align:center; color: #e2e2e2">___________________________________________________________________________________________________________________________________</span></div>
       </div>
 
+      <div class="LIsTW" onmouseover="ChangeBkcB(this)" onmouseout="ChangeBkcW(this)">
+        <div class="container col-md-8"  style="width: 900px;">
+          <br />
+          <div class="row" style="width: 900px;margin-left:-165px;">
+
+            <div class="col-md-8" style="float: left;">
+              <a href="single.html" class="Ntitle">猫咪死了怎么办？</a><br />
+              <textarea readonly rows="2" cols="70" class="Ntxt">今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了</textarea><br />
+              <a href="single.html" class="Nusername">大佬带我飞</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="Nusername">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><span class="Nusername">点赞：38</span>
+            </div>
+            <div class="col-md-4" style="float: right;">
+              <div style="margin-top:10px;float:right;">
+                <a href="single.html"><img src="../img/dead.jpg" class="textpicture" style="height:120px;" alt="user-image" /></a>
+              </div>
+            </div>
+          </div>
+          <!--<div style="text-align:left"><span class="page-header" style="text-align:center; color: #e2e2e2">____________________________________________________________________</span></div>-->
+        </div>
+      </div>
+
+      <!--<div class="container dispear" id="bgcolor">-->
+        <!--<br/>-->
+        <!--<div class="row">-->
+          <!--<div class="col-md-3">-->
+            <!--<span style="color: rgba(0,0,0,0)">............................................</span>-->
+            <!--<a href="single.html" style=""><img src="../img/12.jpg" class="Headportrait" alt="user-image" /></a>-->
+          <!--</div>-->
+          <!--<div class="col-md-5">-->
+            <!--<a href="single.html" class="title">猫咪死了怎么办？</a><br />-->
+            <!--<a href="single.html" class="username">大佬带我飞</a><br />-->
+            <!--<a href="single.html" class="txt">今天早上起来发现猫咪被我压死了</a>-->
+          <!--</div>-->
+          <!--<div class="col-md-4">-->
+            <!--<span class="title"></span><br />-->
+            <!--<a href="single.html" class="username">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="username">点赞：38</a><br />-->
+            <!--<span class="txt"></span>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div style="text-align:center"><span class="page-header" style="text-align:center; color: #e2e2e2">___________________________________________________________________________________________________________________________________</span>-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<div class="container dispear" id="bgcolor">-->
+        <!--<br/>-->
+        <!--<div class="row">-->
+          <!--<div class="col-md-3">-->
+            <!--<span style="color: rgba(0,0,0,0)">............................................</span>-->
+            <!--<a href="single.html"><img src="../img/12.jpg" class="Headportrait" alt="user-image" /></a>-->
+          <!--</div>-->
+          <!--<div class="col-md-5">-->
+            <!--<a href="single.html" class="title">猫咪死了怎么办？</a><br />-->
+            <!--<a href="single.html" class="username">大佬带我飞</a><br />-->
+            <!--<a href="single.html" class="txt">今天早上起来发现猫咪被我压死了</a>-->
+          <!--</div>-->
+          <!--<div class="col-md-4">-->
+            <!--<span class="title"></span><br />-->
+            <!--<a href="single.html" class="username">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="username">点赞：38</a><br />-->
+            <!--<span class="txt"></span>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div style="text-align:center"><span class="page-header" style="text-align:center; color: #e2e2e2">___________________________________________________________________________________________________________________________________</span></div>-->
+      <!--</div>-->
+
+      <!--<div class="container dispear" id="bgcolor">-->
+        <!--<br/>-->
+        <!--<div class="row">-->
+          <!--<div class="col-md-3">-->
+            <!--<span style="color: rgba(0,0,0,0)">............................................</span>-->
+            <!--<a href="single.html"><img src="../img/12.jpg" class="Headportrait" alt="user-image" /></a>-->
+          <!--</div>-->
+          <!--<div class="col-md-5">-->
+            <!--<a href="single.html" class="title">猫咪死了怎么办？</a><br />-->
+            <!--<a href="single.html" class="username">大佬带我飞</a><br />-->
+            <!--<a href="single.html" class="txt">今天早上起来发现猫咪被我压死了</a>-->
+          <!--</div>-->
+          <!--<div class="col-md-4">-->
+            <!--<span class="title"></span><br />-->
+            <!--<a href="single.html" class="username">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="username">点赞：38</a><br />-->
+            <!--<span class="txt"></span>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div style="text-align:center"><span class="page-header" style="text-align:center; color: #e2e2e2">___________________________________________________________________________________________________________________________________</span></div>-->
       <br />
       <br />
       <br />
@@ -354,7 +453,7 @@
       <br />
       <br />
       <br />
-    </div>
+      </div>
   </div>
 
 </section>
