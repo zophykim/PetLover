@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <title>我的相册</title>
+  <!-- Meta tag Keywords -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="" />
+  <script type="text/javascript" src="../js/frontpageHead.js"></script>
+  <script>
+    addEventListener("load", function() {
+      setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+      window.scrollTo(0, 1);
+    };
+  </script>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+    #home{
+      /*position: fixed;*/
+    }
+    .px-lg-5{
+      /*position: fixed;*/
+      background-image: url(../img/1.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .container{
+      width: 960px;
+      margin:0 auto;
+      /*background-color: #ff0c02;*/
+    }
+    /*left*/
+    .left {
+      width: 270px;
+      margin-top: 50px;
+      float:left;
+      /*position: fixed;*/
+      /*background-color: #05fffa;*/
+    }
+    .left ul li{
+      list-style: none;
+      width: 270px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      /*background-color: purple;*/
+    }
+    .left ul li a{
+      display: block;
+      text-decoration: none;
+      width: 270px;
+      height: 60px;
+      border-bottom: 1px solid rgba(35,156,237,0.5);
+      padding: 5px;
+      box-sizing: border-box;
+      color:#333;
+      font:1rem Arial;
+      line-height: 60px;
+      /*background-color: #05ff68;*/
+    }
+    .left ul li a:visited{
+      background-color: rgba(35,156,237,0.5);
+    }
+    .left ul li a:hover{
+      background-color: rgba(35,156,237,0.5);
+    }
+    .setIcon{
+      width: 32px;
+      height: 32px;
+      float:left;
+      text-align: center;
+      margin:10px 0 10px 20px;
+      /*background-color: #22ff04;*/
+      border-radius: 20%;
+      background-image: url("../img/setPerson.png");
+      background-size: cover;
+    }
+    .setLove {
+      background-image: url("../img/setLove.png");
+    }
+    .setFocus{
+      background-image: url("../img/setFocus.png");
+    }
+    .setTiezi{
+      background-image: url("../img/setTiezi.png");
+    }
+    .setPic{
+      background-image: url("../img/setPic.png");
+    }
+    .setLogout{
+      background-image: url("../img/setLogout.png");
+    }
+    .setCount{
+      background-image: url("../img/setCount.png");
+    }
+    .setHead{
+      background-image: url("../img/setHead.png");
+    }
+    .setTxt{
+      float:left;
+      text-align: left;
+      margin-left:30px;
+      height:50px;
+      font-size: 20px;
+      /*background-color: #97ffff;*/
+    }
+    /*right*/
+    .right{
+      width: 640px;
+      margin-top: 50px;
+      margin-right: 100px;
+      /*background-color: #05fffa;*/
+      float:right;
+    }
+    .right-top{
+      width: 800px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 1.3rem;
+      border-bottom: 2px solid #d8d8d8;
+      /*padding-left: 20px ;*/
+      /*background-color: #22ff04;*/
+    }
+    .right-bottom{
+      width: 800px;
+      /*background-color: #22ff04;*/
+    }
+    .right-bottom-top{
+      width: 400px;
+      height: 300px;
+      margin: 0 auto;
+      padding: 60px 10px;
+      text-align: center;
+      /*background-color: #ff3a24;*/
+    }
+    .headImg-choose{
+      width: 180px;
+      height: 180px;
+      float: left;
+      position: relative;
+      text-align: center;
+      background-color: rgb(241,242,245);
+      /*border-right: 2px solid #d8d8d8;*/
+      /*background-image: url(../img/choosePic.png);*/
+      background-size: cover;
+      /*background-color: #cdff09;*/
+    }
+    .headImg-choose-img{
+      display: block;
+      width: 60px;
+      height: 60px;
+      margin: 60px 60px 0 60px;
+      /*background-color: #cdff09;*/
+    }
+    .headImg-choose input{
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .fillPic{
+      display: none;
+      width: 180px;
+      height: 180px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      background-color: #d8d8d8;
+    }
+    tr{
+      width: 640px;
+      /*background-color: #ff0c02;*/
+    }
+    /*第一行第一个td*/
+    .top-line{
+      width: 150px;
+      height: 120px;
+      /*background-color: pink;*/
+    }
+    .headImg{
+      width: 160px;
+      height: 180px;
+      float: right;
+      padding: 40px 0 0 40px;
+      text-align: center;
+      box-sizing: border-box;
+      border-left: 1px solid #d8d8d8;
+      /*display: inline-block;*/
+      /*background-color: #cdff09;*/
+    }
+    /*div*/
+    .headImg img{
+      /*display:inline-block;*/
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      /*margin-top: 50px;*/
+      /*border-color:rgba(35,156,237,0.5);*/
+      box-shadow: #d8d8d8 3px 3px 10px 2px;
+    }
+    .textSpan{
+      height: 50px;
+      line-height: 50px;
+      display: inline-block;
+    }
+    /*第一行第二个td*/
+    .top-line-secd{
+      height: 120px;
+      width: 490px;
+      /*background-color: #ebe987;*/
+    }
+    .chooseBtn{
+      height: 30px;
+      width: 100px;
+      display: inline-block;
+      box-sizing: border-box;
+      line-height: 30px;
+      /*background-color: #03f5ff;*/
+      border: 2px solid rgba(35,156,237,0.5);
+      box-shadow:#d8d8d8 3px 3px 10px 2px ;
+    }
+    .hide{
+      width: 100px;
+      opacity: 0;/*透明度*/
+      position: absolute;
+      /*background-color: #ff0c02;*/
+    }
+    .chooseBtn span{
+      color:rgba(35,156,237,0.5);
+      padding-left: 15px;
+    }
+    .setTitle{
+      width: 150px;
+      height: 70px;
+      color:rgb(150,150,150);
+      font-size: 22px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+    .setCont{
+      width: 490px;
+      height: 70px;
+      /*background-color: #ff0c02;*/
+      border-bottom: 2px solid #f0f0f0;
+    }
+    textarea{
+      width: 500px;
+      height: 200px;
+      font-size: 15px;
+      font-family: SimSun;
+      border: 2px solid #c8c8c8;
+    }
+    .setSName{
+      width: 200px;
+      height: 30px;
+      font-size: 15px;
+      font-family: SimSun;
+      border: 2px solid #c8c8c8;
+    }
+    [type="radio"]{
+      margin:0 5px;
+    }
+    .setCont span{
+      margin:0 5px;
+    }
+    /*最下面的按钮*/
+    .subBtn{
+      width: 640px;
+      height: 70px;
+      margin:50px auto;
+      /*background-color: #ff0c02;*/
+      line-height: 70px;
+    }
+    /*[type="submit"]{
+      width: 150px;
+      height: 50px;
+      margin: 0 200px;
+      line-height: 50px;
+      font-size: 1rem;
+      font-family: SimSun;
+      color:white;
+      background-color: rgba(35,156,237,0.5);
+      border: 2px solid #c8c8c8;
+      box-shadow:#d8d8d8 3px 3px 10px 2px ;
+      cursor: pointer;
+    }*/
+  </style>
+  <!-- //Meta tag Keywords -->
+
+  <!-- Custom-Files -->
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <!-- Bootstrap-Core-CSS -->
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../css/style1.css" type="text/css" media="all" />
+  <!-- Style-CSS -->
+  <!-- font-awesome-icons -->
+  <link href="../css/font-awesome.css" rel="stylesheet">
+  <link href="../css/inline.css" rel="stylesheet">
+  <!-- //font-awesome-icons -->
+  <!-- /Fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,800" rel="stylesheet">
+  <!-- //Fonts -->
+</head>
+
+<body>
+<!-- mian-content -->
+<!-- //header -->
+<div class="banner-content1 inner" id="home">
+  <!-- header -->
+  <header class="header">
+    <div class="container-fluid px-lg-5">
+      <!-- nav -->
+      <nav class="py-4">
+        <div id="logo">
+          <h1>
+            <a href="../index.html">PetLovers</a>
+          </h1>
+          <label for="drop" class="toggle">Menu</label>
+          <input type="checkbox" id="drop" />
+          <ul class="menu mt-2">
+            <li class="active"><a href="../index.html"><font size="+3">首页</font></a></li>
+
+            <li ><a href="forum.html"><font size="+3" >论坛</font></a></li>
+
+            <li><a href="events.html"><font size="+3" >百科</font></a></li>
+            <li><a href="frontpage.html"><img src="../img/12.jpg"></a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- //nav -->
+    </div>
+  </header>
+  <!-- //header -->
+</div>
+<!-- //header -->
+<!--// mian-content -->
+<!---->    <!---->
+<!--// mian-content -->
+<!-- banner -->
+<section >
+
+  <div class="container">
+    <div class="left">
+      <ul>
+        <li>
+          <a href="frontpage.html">
+            <div class="setIcon"></div>
+            <span class="setTxt">个人资料</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="frontpageHead.html">
+            <div class="setIcon setHead"></div>
+            <span class="setTxt">我的头像</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="frontpage2.html">
+            <div class="setIcon setCount"></div>
+            <span class="setTxt">账号管理</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="frontpage3.html">
+            <div class="setIcon setLove"></div>
+            <span class="setTxt">收藏夹</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="frontpage4.html">
+            <div class="setIcon setFocus"></div>
+            <span class="setTxt">我的关注</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="frontpage5.html">
+            <div class="setIcon setTiezi"></div>
+            <span class="setTxt">我的帖子</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="frontpage7.html">
+            <div class="setIcon setPic"></div>
+            <span class="setTxt">我的相册</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="../index.html">
+            <div class="setIcon setLogout"></div>
+            <span class="setTxt">退出登录</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="right">
+      <div class="right-top">我的头像</div>
+      <div class="right-bottom">
+        <form>
+          <div class="right-bottom-top">
+            <!--左边图片-->
+            <div class="headImg-choose">
+              <img class="headImg-choose-img" src="../img/choosePic.png">
+              <span>选择图片</span>
+              <input type="file" onchange="updateHeadImagPath(this)">
+              <img class="fillPic" src="../img/1.jpg" id="fillPic">
+            </div>
+            <!--右边图片-->
+            <div class="headImg">
+              <img id="HeadCut"/>
+              <span class="textSpan">当前头像</span>
+            </div>
+          </div>
+          <!--底部按钮-->
+
+            <input class="toSent" style="cursor: pointer; margin-left:300px;" type="submit" value="  确认提交  " onclick="submitPic()">
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<div style=";float:left;width: 100%;height: 50px;">
+</div>
+
+</body>
+
+</html>

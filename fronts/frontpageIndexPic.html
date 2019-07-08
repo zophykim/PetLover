@@ -3,6 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>个人首页</title>
+  <script>
+    function changToBig(a) {
+      // petImg.style.transition='all,1s';
+      // petImg.style.transform='scale(2.5,2.5)';
+      document.getElementById('setForPositionCenter').style.display='none';
+      var pic = document.getElementById('displayForPic');
+      pic.style.display='inline-block';
+      document.getElementById('phoPic').src = a.src;
+      document.getElementById('phoPic').style.display = 'inline-block';
+      document.getElementById('grayBgc').style.display='inline-block';
+      // alert('哦豁，变变变，大!大!!大!!!');
+    }
+
+    function changToSmall(a) {
+      a.style.display='none';
+      document.getElementById('setForPositionCenter').style.display='inline-block';
+      document.getElementById('grayBgc').style.display='none';
+    }
+
+    function changToSmallT(a) {
+      a.style.display='none';
+      document.getElementById('setForPositionCenter').style.display='inline-block';
+      document.getElementById('displayForPic').style.display='none';
+    }
+  </script>
   <style>
     *{
       margin: 0;
@@ -186,6 +211,85 @@
       text-align: center;
       /*background-color: #ebe987;*/
     }
+
+    .setForPositionCenter{
+      width: 900px;
+      /*height: 50px;*/
+      margin: 0 500px;
+      display: inline-block;
+      /*background-color: #03f5ff;*/
+    }
+    .right-bottom{
+      width: 280px;
+      height: 280px;
+      margin: 30px 8px;
+      display: inline-block;
+      /*position:relative;*/
+      border: 1px solid #c9c9c9;
+      box-shadow: #d8d8d8 3px 3px 10px 2px;
+      /*z-index: -1;*/
+      /*background-color: #22ff04;*/
+    }
+    .right-bottom img{
+      width: 280px;
+      height: 230px;
+      object-fit: cover;
+      display: inline-block;
+      /*background-color: #cdff09;*/
+      /*transition:all 1s;*/
+      /*position: absolute;*/
+    }
+    /*.right-bottom:hover img{*/
+    /*!*top:45%;*!*/
+    /*!*left:50%;*!*/
+    /*transform: scale(2.5,2.5);*/
+    /*!*z-index: 666;*!*/
+    /*}*/
+    .right-bottom span{
+      display: inline-block;
+      line-height: 50px;
+      /*background-color: #03f5ff;*/
+      /*padding-top: 230px;*/
+    }
+    [type="button"]{
+      float:right;
+      line-height: 48px;
+      border:none;
+      display: inline-block;
+      background-color:white;
+      /*padding-top: 230px;*/
+    }
+    .grayBgc{
+      width: 100%;
+      height: 2000px;
+      background-color: rgba(100,100,100,0.9);
+      position: fixed;
+      z-index: 999;
+      top:0;
+      left:0;
+      /*overflow: hidden;*/
+      display: none;
+    }
+    .displayForPic{
+      position: absolute;
+      top:100px;
+      left:600px;
+      width: 800px;
+      box-shadow: #d8d8d8 3px 3px 10px 2px;
+      /*height: 700px;*/
+      /*background-image: url(../img/dog.jpg);*/
+      /*background: url(http://localhost:63342/WSworkplace/19/img/dog.jpg) center center no-repeat;*/
+      /*background-size: cover;*/
+      z-index: 9999;
+      display: none;
+    }
+    .phoPic{
+      /*background-color: #ff3a24;*/
+      width: 800px;
+      /*height: 700px;*/
+      object-fit: cover;
+      display: none;
+    }
   </style>
   <!-- //Meta tag Keywords -->
 
@@ -262,82 +366,97 @@
 <!------------------------------------------------------------------------------------------------------------>
 
 <div class="contentDiv">
-  <a href="#">帖子</a>
-  <a href="frontpageIndexPic.html">相册</a>
+  <a href="frontpageIndex.html">帖子</a>
+  <a href="#">相册</a>
   <!--<div><a href="#">帖子</a></div>-->
   <!--<div><a href="">相册</a></div>-->
 </div>
 
-<div class="container col-md-8" id="bgcolor" style="width: 900px;box-shadow: #d8d8d8 3px 3px 10px 2px">
-  <br />
-  <div class="row">
-
-    <div class="col-md-8">
-      <a href="single.html" class="Ntitle">猫咪死了怎么办？</a><br />
-      <textarea readonly rows="2" cols="70" class="Ntxt">今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了</textarea><br />
-      <a href="single.html" class="Nusername">大佬带我飞</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="Nusername">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><span class="Nusername">点赞：38</span>
-    </div>
-    <div class="col-md-4">
-      <div style="margin-top:10px;float:right;">
-        <a href="single.html"><img src="../img/dead.jpg" class="textpicture" style="height:120px; " alt="user-image" /></a>
-      </div>
-    </div>
+<div class="setForPositionCenter" id="setForPositionCenter">
+  <div class="right-bottom">
+    <img src="../img/dog.jpg"  onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
   </div>
-  <div style="text-align:left"><span class="page-header" style="text-align:center; color: #e2e2e2">____________________________________________________________________</span></div>
+
+  <div class="right-bottom">
+    <img src="../img/1.jpg" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+
+  <div class="right-bottom">
+    <img src="../img/2.jpg" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+
+  <div class="right-bottom">
+    <img src="../img/3.jpg" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+
+  <div class="right-bottom">
+    <img src="../img/4.jpg" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+
+  <div class="right-bottom">
+    <img src="../img/5.jpg" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <input type="button" value="删除图片">
+  </div>
+
+  <div class="right-bottom">
+    <img src="../img/6.jpg" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+
+
+  <div class="right-bottom">
+    <img src="../img/animals/hamsters.jpg" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+
+  <div class="right-bottom">
+    <img src="../img/animals/german_shepherd_dog.jpg" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+
+  <div class="right-bottom">
+    <img src="../img/animals/american_wirehair.jpg" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+
+  <div class="right-bottom">
+    <img src="../img/cat.jpg" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+
+  <div class="right-bottom">
+    <img src="../img/rat.jpg" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+
+  <div class="right-bottom">
+    <img src="../img/animals/samoyed.jpg" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
 </div>
 
-<div class="container col-md-8" id="bgcolor" style="width: 900px;box-shadow: #d8d8d8 3px 3px 10px 2px">
-  <br />
-  <div class="row">
-
-    <div class="col-md-8">
-      <a href="single.html" class="Ntitle">猫咪死了怎么办？</a><br />
-      <textarea readonly rows="2" cols="70" class="Ntxt">今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了</textarea><br />
-      <a href="single.html" class="Nusername">大佬带我飞</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="Nusername">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><span class="Nusername">点赞：38</span>
-    </div>
-    <div class="col-md-4">
-      <div style="margin-top:10px;float:right;">
-        <a href="single.html"><img src="../img/dead.jpg" class="textpicture" style="height:120px; " alt="user-image" /></a>
-      </div>
-    </div>
-  </div>
-  <div style="text-align:left"><span class="page-header" style="text-align:center; color: #e2e2e2">____________________________________________________________________</span></div>
-</div>
-
-<div class="container col-md-8" id="bgcolor" style="width: 900px;box-shadow: #d8d8d8 3px 3px 10px 2px">
-  <br />
-  <div class="row">
-
-    <div class="col-md-8">
-      <a href="single.html" class="Ntitle">猫咪死了怎么办？</a><br />
-      <textarea readonly rows="2" cols="70" class="Ntxt">今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了</textarea><br />
-      <a href="single.html" class="Nusername">大佬带我飞</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="Nusername">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><span class="Nusername">点赞：38</span>
-    </div>
-    <div class="col-md-4">
-      <div style="margin-top:10px;float:right;">
-        <a href="single.html"><img src="../img/dead.jpg" class="textpicture" style="height:120px; " alt="user-image" /></a>
-      </div>
-    </div>
-  </div>
-  <div style="text-align:left"><span class="page-header" style="text-align:center; color: #e2e2e2">____________________________________________________________________</span></div>
-</div>
-
-<div class="container col-md-8" id="bgcolor" style="width: 900px;box-shadow: #d8d8d8 3px 3px 10px 2px">
-  <br />
-  <div class="row">
-
-    <div class="col-md-8">
-      <a href="single.html" class="Ntitle">猫咪死了怎么办？</a><br />
-      <textarea readonly rows="2" cols="70" class="Ntxt">今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了今天早上起来发现猫咪被我压死了</textarea><br />
-      <a href="single.html" class="Nusername">大佬带我飞</a><span style="color :rgba(0,0,0,0)">....</span><a href="single.html" class="Nusername">评论：20</a><span style="color :rgba(0,0,0,0)">....</span><span class="Nusername">点赞：38</span>
-    </div>
-    <div class="col-md-4">
-      <div style="margin-top:10px;float:right;">
-        <a href="single.html"><img src="../img/dead.jpg" class="textpicture" style="height:120px; " alt="user-image" /></a>
-      </div>
-    </div>
-  </div>
-  <div style="text-align:left"><span class="page-header" style="text-align:center; color: #e2e2e2">____________________________________________________________________</span></div>
+<div style="height: 50px;width: 100%;float: left;"></div>
+<div class="grayBgc" id="grayBgc" onclick="changToSmallT(this)"></div>
+<div class="displayForPic" id="displayForPic" onclick="changToSmall(this)">
+  <img class="phoPic" id="phoPic" src="http://localhost:63342/WSworkplace/19/img/dog.jpg" />
 </div>
 
 <div style="height: 50px;width: 100%;float: left;"></div>

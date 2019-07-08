@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <title>我的相册</title>
+  <!-- Meta tag Keywords -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="" />
+  <script>
+    addEventListener("load", function() {
+      setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+      window.scrollTo(0, 1);
+    }
+
+    function changToBig(a) {
+      // petImg.style.transition='all,1s';
+      // petImg.style.transform='scale(2.5,2.5)';
+      document.getElementById('setForPositionCenter').style.display='none';
+      var pic = document.getElementById('displayForPic');
+      pic.style.display='inline-block';
+      document.getElementById('phoPic').src = a.src;
+      document.getElementById('phoPic').style.display = 'inline-block';
+      document.getElementById('grayBgc').style.display='inline-block';
+      // alert('哦豁，变变变，大!大!!大!!!');
+    }
+
+    function changToSmall(a) {
+      a.style.display='none';
+      document.getElementById('setForPositionCenter').style.display='inline-block';
+      document.getElementById('grayBgc').style.display='none';
+    }
+
+    function changToSmallT(a) {
+      a.style.display='none';
+      document.getElementById('setForPositionCenter').style.display='inline-block';
+      document.getElementById('displayForPic').style.display='none';
+    }
+  </script>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+    #home{
+      /*position: fixed;*/
+    }
+    .px-lg-5{
+      /*position: fixed;*/
+      background-image: url(../img/1.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      /*z-index: 999;*/
+    }
+    .container{
+      width: 960px;
+      margin:0 auto;
+      /*background-color: #ff0c02;*/
+    }
+    /*left*/
+    .left {
+      width: 270px;
+      margin-top: 50px;
+      float:left;
+      /*position: fixed;*/
+      /*background-color: #05fffa;*/
+    }
+    .left ul li{
+      list-style: none;
+      width: 270px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      /*background-color: purple;*/
+    }
+    .left ul li a{
+      display: block;
+      text-decoration: none;
+      width: 270px;
+      height: 60px;
+      border-bottom: 1px solid rgba(35,156,237,0.5);
+      padding: 5px;
+      box-sizing: border-box;
+      color:#333;
+      font:1rem Arial;
+      line-height: 60px;
+      /*background-color: #05ff68;*/
+    }
+    .left ul li a:visited{
+      background-color: rgba(35,156,237,0.5);
+    }
+    .left ul li a:hover{
+      background-color: rgba(35,156,237,0.5);
+    }
+    .setIcon{
+      width: 32px;
+      height: 32px;
+      float:left;
+      text-align: center;
+      margin:10px 0 10px 20px;
+      /*background-color: #22ff04;*/
+      border-radius: 20%;
+      background-image: url("../img/setPerson.png");
+      background-size: cover;
+    }
+    .setLove {
+      background-image: url("../img/setLove.png");
+    }
+    .setFocus{
+      background-image: url("../img/setFocus.png");
+    }
+    .setTiezi{
+      background-image: url("../img/setTiezi.png");
+    }
+    .setPic{
+      background-image: url("../img/setPic.png");
+    }
+    .setLogout{
+      background-image: url("../img/setLogout.png");
+    }
+    .setCount{
+      background-image: url("../img/setCount.png");
+    }
+    .setHead{
+      background-image: url("../img/setHead.png");
+    }
+    .setTxt{
+      float:left;
+      text-align: left;
+      margin-left:30px;
+      height:50px;
+      font-size: 20px;
+      /*background-color: #97ffff;*/
+    }
+    /*right*/
+    .right{
+      width: 900px;
+      margin-top: 50px;
+      margin-right: -150px;
+      /*position: relative;*/
+      /*background-color: #05fffa;*/
+      float:right;
+    }
+    .right-top{
+      width: 900px;
+      height: 100px;
+      border-bottom: 1px solid #c9c9c9;
+      /*background-color: #cdff09;*/
+    }
+    .right-top span{
+      display: inline-block;
+      width: 150px;
+      height: 100px;
+      line-height: 100px;
+      padding-top: 20px;
+      font-size:1.8rem;
+      /*background-color: #8bd8eb;*/
+    }
+    [type="file"]{
+      width: 80px;
+      height: 30px;
+      display: inline-block;
+      /*background-color: #ff3a24;*/
+    }
+    .right-bottom{
+      width: 280px;
+      height: 280px;
+      margin: 30px 8px;
+      display: inline-block;
+      /*position:relative;*/
+      border: 1px solid #c9c9c9;
+      box-shadow: #d8d8d8 3px 3px 10px 2px;
+      /*z-index: -1;*/
+      /*background-color: #22ff04;*/
+    }
+    .right-bottom img{
+      width: 280px;
+      height: 230px;
+      object-fit: cover;
+      display: inline-block;
+      /*background-color: #cdff09;*/
+      /*transition:all 1s;*/
+      /*position: absolute;*/
+    }
+    /*.right-bottom:hover img{*/
+      /*!*top:45%;*!*/
+      /*!*left:50%;*!*/
+      /*transform: scale(2.5,2.5);*/
+      /*!*z-index: 666;*!*/
+    /*}*/
+    .right-bottom span{
+      display: inline-block;
+      line-height: 50px;
+      /*background-color: #03f5ff;*/
+      /*padding-top: 230px;*/
+    }
+    [type="button"]{
+      float:right;
+      line-height: 48px;
+      border:none;
+      display: inline-block;
+      background-color:white;
+      /*padding-top: 230px;*/
+    }
+    .grayBgc{
+      width: 100%;
+      height: 2000px;
+      background-color: rgba(100,100,100,0.9);
+      position: fixed;
+      z-index: 999;
+      top:0;
+      left:0;
+      /*overflow: hidden;*/
+      display: none;
+    }
+    .displayForPic{
+      position: absolute;
+      left:600px;
+      width: 700px;
+      box-shadow: #d8d8d8 3px 3px 10px 2px;
+      /*height: 700px;*/
+      /*background-image: url(../img/dog.jpg);*/
+      /*background: url(http://localhost:63342/WSworkplace/19/img/dog.jpg) center center no-repeat;*/
+      /*background-size: cover;*/
+      z-index: 9999;
+      display: none;
+    }
+    .phoPic{
+      /*background-color: #ff3a24;*/
+      width: 700px;
+      /*height: 700px;*/
+      object-fit: cover;
+      display: none;
+    }
+  </style>
+  <!-- //Meta tag Keywords -->
+
+  <!-- Custom-Files -->
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <!-- Bootstrap-Core-CSS -->
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../css/style1.css" type="text/css" media="all" />
+  <!-- Style-CSS -->
+  <!-- font-awesome-icons -->
+  <link href="../css/font-awesome.css" rel="stylesheet">
+  <link href="../css/inline.css" rel="stylesheet">
+  <!-- //font-awesome-icons -->
+  <!-- /Fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,800" rel="stylesheet">
+  <!-- //Fonts -->
+</head>
+
+<body>
+<!-- mian-content -->
+<!-- //header -->
+<div class="banner-content1 inner" id="home">
+  <!-- header -->
+  <header class="header">
+    <div class="container-fluid px-lg-5">
+      <!-- nav -->
+      <nav class="py-4">
+        <div id="logo">
+          <h1>
+            <a href="../index.html">PetLovers</a>
+          </h1>
+          <label for="drop" class="toggle">Menu</label>
+          <input type="checkbox" id="drop" />
+          <ul class="menu mt-2">
+            <li class="active"><a href="../index.html"><font size="+3">首页</font></a></li>
+
+            <li ><a href="forum.html"><font size="+3" >论坛</font></a></li>
+
+            <li><a href="events.html"><font size="+3" >百科</font></a></li>
+            <li><a href="frontpage.html"><img src="../img/12.jpg"></a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- //nav -->
+    </div>
+  </header>
+  <!-- //header -->
+</div>
+<!-- //header -->
+<!--// mian-content -->
+<!---->    <!---->
+<!--// mian-content -->
+<!-- banner -->
+<section >
+
+  <div class="container">
+    <div class="left">
+      <ul>
+        <li>
+          <a href="frontpage.html">
+            <div class="setIcon"></div>
+            <span class="setTxt">个人资料</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="frontpageHead.html">
+            <div class="setIcon setHead"></div>
+            <span class="setTxt">我的头像</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="frontpage2.html">
+            <div class="setIcon setCount"></div>
+            <span class="setTxt">账号管理</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="frontpage3.html">
+            <div class="setIcon setLove"></div>
+            <span class="setTxt">收藏夹</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="frontpage4.html">
+            <div class="setIcon setFocus"></div>
+            <span class="setTxt">我的关注</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="frontpage5.html">
+            <div class="setIcon setTiezi"></div>
+            <span class="setTxt">我的帖子</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="frontpage7.html">
+            <div class="setIcon setPic"></div>
+            <span class="setTxt">我的相册</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="../index.html">
+            <div class="setIcon setLogout"></div>
+            <span class="setTxt">退出登录</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="right">
+     <div class="right-top">
+       <span>萌宠时光</span>
+       上传图片<input type="file">
+     </div>
+      <div id="setForPositionCenter">
+        <div class="right-bottom">
+          <img src="../img/dog.jpg"  onclick="changToBig(this)"/>
+          <span>2019/7/6</span>
+          <input type="button" value="删除图片">
+        </div>
+
+        <div class="right-bottom">
+          <img src="../img/1.jpg" class="petImg" onclick="changToBig(this)"/>
+          <span>2019/7/6</span>
+          <input type="button" value="删除图片">
+        </div>
+
+        <div class="right-bottom">
+          <img src="../img/2.jpg" class="petImg" onclick="changToBig(this)"/>
+          <span>2019/7/6</span>
+          <input type="button" value="删除图片">
+        </div>
+
+        <div class="right-bottom">
+          <img src="../img/3.jpg" class="petImg" onclick="changToBig(this)"/>
+          <span>2019/7/6</span>
+          <input type="button" value="删除图片">
+        </div>
+
+        <div class="right-bottom">
+          <img src="../img/4.jpg" class="petImg" onclick="changToBig(this)"/>
+          <span>2019/7/6</span>
+          <input type="button" value="删除图片">
+        </div>
+
+        <div class="right-bottom">
+          <img src="../img/5.jpg" class="petImg" onclick="changToBig(this)"/>
+          <span>2019/7/6</span>
+          <input type="button" value="删除图片">
+        </div>
+
+        <div class="right-bottom">
+          <img src="../img/6.jpg" class="petImg" onclick="changToBig(this)"/>
+          <span>2019/7/6</span>
+          <input type="button" value="删除图片">
+        </div>
+
+
+        <div class="right-bottom">
+          <img src="../img/11.jpg" class="petImg" onclick="changToBig(this)"/>
+          <span>2019/7/6</span>
+          <input type="button" value="删除图片">
+        </div>
+
+        <div class="right-bottom">
+          <img src="../img/paw.png" class="petImg" onclick="changToBig(this)"/>
+          <span>2019/7/6</span>
+          <input type="button" value="删除图片">
+        </div>
+
+        <div class="right-bottom">
+          <img src="../img/32.png" class="petImg" onclick="changToBig(this)"/>
+          <span>2019/7/6</span>
+          <input type="button" value="删除图片">
+        </div>
+
+        <div class="right-bottom">
+          <img src="../img/cat.jpg" class="petImg" onclick="changToBig(this)"/>
+          <span>2019/7/6</span>
+          <input type="button" value="删除图片">
+        </div>
+
+        <div class="right-bottom">
+          <img src="../img/rat.jpg" class="petImg" onclick="changToBig(this)"/>
+          <span>2019/7/6</span>
+          <input type="button" value="删除图片">
+        </div>
+
+        <div class="right-bottom">
+          <img src="../img/pet.png" class="petImg" onclick="changToBig(this)"/>
+          <span>2019/7/6</span>
+          <input type="button" value="删除图片">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<div style="height: 50px;width: 100%;float: left;"></div>
+<div class="grayBgc" id="grayBgc" onclick="changToSmallT(this)"></div>
+<div class="displayForPic" id="displayForPic" onclick="changToSmall(this)">
+  <img class="phoPic" id="phoPic" src="http://localhost:63342/WSworkplace/19/img/dog.jpg" />
+</div>
+</body>
+
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>个人首页</title>
+  <script type="text/javascript" src="../js/otherpageIndex.js"></script>
+  <script>
+    function changToBig(a) {
+      // petImg.style.transition='all,1s';
+      // petImg.style.transform='scale(2.5,2.5)';
+      document.getElementById('setForPositionCenter').style.display='none';
+      var pic = document.getElementById('displayForPic');
+      pic.style.display='inline-block';
+      document.getElementById('phoPic').src = a.src;
+      document.getElementById('phoPic').style.display = 'inline-block';
+      document.getElementById('grayBgc').style.display='inline-block';
+      // alert('哦豁，变变变，大!大!!大!!!');
+    }
+
+    function changToSmall(a) {
+      a.style.display='none';
+      document.getElementById('setForPositionCenter').style.display='inline-block';
+      document.getElementById('grayBgc').style.display='none';
+    }
+
+    function changToSmallT(a) {
+      a.style.display='none';
+      document.getElementById('setForPositionCenter').style.display='inline-block';
+      document.getElementById('displayForPic').style.display='none';
+    }
+  </script>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .topDiv{
+      width: 900px;
+      height: 180px;
+      /*background-color: #ff3a24;*/
+      margin: 40px auto;
+      /*border-bottom: 1px solid #c9c9c9;*/
+    }
+    .imgDiv{
+      float: left;
+      margin:20px;
+    }
+    .setHeadcut{
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+    }
+    .btnDivFst{
+      float: right;
+      margin: 20px 0;
+    }
+    a{
+      text-decoration: none;
+      font-weight: 500;
+      /*font-size:1rem;*/
+      color: white;
+    }
+    .btnDivFst a span{
+      height: 40px;
+      width: 100px;
+      float: right;
+      text-align: center;
+      border: 2px solid rgba(35, 156, 237, 0.5);
+      background-color: rgba(35, 156, 237, 0.5);
+      border-top-left-radius:40px;
+      border-top-right-radius:40px;
+      border-bottom-left-radius:40px;
+      border-bottom-right-radius:40px;
+      box-shadow: #d8d8d8 3px 3px 10px 2px;
+      line-height: 40px;
+      box-sizing: border-box;
+    }
+    .btnDivSed{
+      float: right;
+      margin: 20px 30px;
+    }
+    /*.btnDivSed a{*/
+    /*text-decoration: none;*/
+    /*font-family:SimSun ;*/
+    /*font-size:1rem;*/
+    /*color: #f0f0f0;*/
+    /*}*/
+    .btnDivSed a span{
+      height: 40px;
+      width: 100px;
+      float: right;
+      text-align: center;
+      border: 1px solid rgba(35, 156, 237, 0.5);
+      background-color: rgba(35, 156, 237, 0.5);
+      border-top-left-radius:40px;
+      border-top-right-radius:40px;
+      border-bottom-left-radius:40px;
+      border-bottom-right-radius:40px;
+      box-shadow: #d8d8d8 3px 3px 10px 2px;
+      line-height: 40px;
+      box-sizing: border-box;
+    }
+    .topDiv-left{
+      width: 400px;
+      height: 80px;
+      float: left;
+      /*background-color: #cdff09;*/
+    }
+    h2{
+      padding: 22px 0 0 0;
+    }
+    .topDiv-right{
+      width: 400px;
+      height: 80px;
+      float: left;
+      /*background-color: #05ff68;*/
+    }
+    .topDiv-right-top{
+      width: 500px;
+      height: 40px;
+      float:left;
+      box-sizing: border-box;
+      /*background-color: #ff3a24;*/
+    }
+    .topDiv-right-top span{
+      float: left;
+      /*color: #f0f0f0;*/
+    }
+
+    .Addr{
+      width: 60px;
+      height: 30px;
+      margin:10px 6px 6px 6px;
+      border-right: 1px solid #c9c9c9;
+    }
+    .iconSexM{
+      width: 20px;
+      height: 20px;
+      background-image: url(../img/male.png);
+      background-size: cover;
+      margin:10px;
+    }
+    .iconSexF{
+      width: 20px;
+      height: 20px;
+      background-image: url(../img/female.png);
+      background-size: cover;
+      margin:10px;
+      display: none;
+      /*display: inline-block;*/
+    }
+    .iconBirthday{
+      width: 30px;
+      height: 30px;
+      background-image: url(../img/setBirthday.png);
+      background-size: cover;
+      margin:5px 0px 5px 40px;
+      border-left: 1px solid #c9c9c9;
+    }
+    .Birthday{
+      width: 200px;
+      height: 30px;
+      margin:8px;
+    }
+    .topDiv-right-bottom{
+      width: 500px;
+      height: 40px;
+      /*background-color: #80ebc3;*/
+      float:left;
+      padding:20px 0 0 0;
+    }
+
+    .contentDiv{
+      width: 900px;
+      height: 50px;
+      margin: 0 auto;
+      margin-top:-40px;
+      border-bottom: 1px solid #e1e1e1;
+      /*background-color: #cdff09;*/
+    }
+    .contentDiv a{
+      width: 100px;
+      height: 50px;
+      display: inline-block;
+      line-height: 50px;
+      text-align: center;
+      /*background-color: #ebe987;*/
+    }
+
+    .setForPositionCenter{
+      width: 900px;
+      /*height: 50px;*/
+      margin: 0 500px;
+      display: inline-block;
+      /*background-color: #03f5ff;*/
+    }
+    .right-bottom{
+      width: 280px;
+      height: 280px;
+      margin: 30px 8px;
+      display: inline-block;
+      /*position:relative;*/
+      border: 1px solid #c9c9c9;
+      box-shadow: #d8d8d8 3px 3px 10px 2px;
+      /*z-index: -1;*/
+      /*background-color: #22ff04;*/
+    }
+    .right-bottom img{
+      width: 280px;
+      height: 230px;
+      object-fit: cover;
+      display: inline-block;
+      /*background-color: #cdff09;*/
+      /*transition:all 1s;*/
+      /*position: absolute;*/
+    }
+    /*.right-bottom:hover img{*/
+    /*!*top:45%;*!*/
+    /*!*left:50%;*!*/
+    /*transform: scale(2.5,2.5);*/
+    /*!*z-index: 666;*!*/
+    /*}*/
+    .right-bottom span{
+      display: inline-block;
+      line-height: 50px;
+      /*background-color: #03f5ff;*/
+      /*padding-top: 230px;*/
+    }
+    [type="button"]{
+      float:right;
+      line-height: 48px;
+      border:none;
+      display: inline-block;
+      background-color:white;
+      /*padding-top: 230px;*/
+    }
+    .grayBgc{
+      width: 100%;
+      height: 2000px;
+      background-color: rgba(100,100,100,0.9);
+      position: fixed;
+      z-index: 999;
+      top:0;
+      left:0;
+      /*overflow: hidden;*/
+      display: none;
+    }
+    .displayForPic{
+      position: absolute;
+      top:100px;
+      left:600px;
+      width: 700px;
+      box-shadow: #d8d8d8 3px 3px 10px 2px;
+      /*height: 700px;*/
+      /*background-image: url(../img/dog.jpg);*/
+      /*background: url(http://localhost:63342/WSworkplace/19/img/dog.jpg) center center no-repeat;*/
+      /*background-size: cover;*/
+      z-index: 9999;
+      display: none;
+    }
+    .phoPic{
+      /*background-color: #ff3a24;*/
+      width: 700px;
+      /*height: 700px;*/
+      object-fit: cover;
+      display: none;
+    }
+  </style>
+  <!-- //Meta tag Keywords -->
+
+  <!-- Custom-Files -->
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <!-- Bootstrap-Core-CSS -->
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../css/style1.css" type="text/css" media="all" />
+  <!-- Style-CSS -->
+  <!-- font-awesome-icons -->
+  <link href="../css/font-awesome.css" rel="stylesheet">
+  <link href="../css/inline.css" rel="stylesheet">
+  <!-- //font-awesome-icons -->
+  <!-- /Fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,800" rel="stylesheet">
+  <!-- //Fonts -->
+</head>
+<body>
+<div class="banner-content1 inner" id="home">
+  <!-- header -->
+  <header class="header">
+    <div class="container-fluid px-lg-5">
+      <!-- nav -->
+      <nav class="py-4">
+        <div id="logo">
+          <h1>
+            <a href="index.html">PetLovers</a>
+          </h1>
+          <label for="drop" class="toggle">Menu</label>
+          <input type="checkbox" id="drop" />
+          <ul class="menu mt-2">
+            <li class="active"><a href="index.html"><font size="+3">首页</font></a></li>
+
+            <li ><a href="luntan.html"><font size="+3" >论坛</font></a></li>
+
+            <li><a href="events.html"><font size="+3" >小贴士</font></a></li>
+            <li><a href="otherpageIndex.html"><img src="../img/12.jpg"></a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- //nav -->
+    </div>
+  </header>
+  <!-- //header -->
+</div>
+<!----------------------------------------------------------------------------------------->
+<div class="topDiv">
+  <div class="imgDiv">
+    <a href="otherpageIndex.html">
+      <img src="../img/1.jpg" alt="240" class="setHeadcut">
+    </a>
+  </div>
+
+  <div><a href="#" class="toSent" style="float: right; margin: 20px 30px;"><span style="color :rgba(0,0,0,0)">..</span><span>发消息</span><span style="color :rgba(0,0,0,0)">..</span></a></div>
+  <div id="AddCheck" onclick="Checked()"><a href="#" class="toSent" style="float: right; margin: 20px 30px;"><span style="color :rgba(0,0,0,0)">..</span><span>+ 关注</span><span style="color :rgba(0,0,0,0)">..</span></a></div>
+  <div id="CancleCheck" style="display: none" onclick="UnChecked()"><a href="#" class="toSent" style="float: right; margin: 20px 30px;"><span style="color :rgba(0,0,0,0)">..</span><span>已关注</span><span style="color :rgba(0,0,0,0)">..</span></a></div>
+
+  <div class="topDiv-left">
+    <a href="otherpageIndex.html" style="color: #000"><h2>大佬带我飞</h2></a>
+  </div>
+  <div class="topDiv-right">
+    <div class="topDiv-right-top">
+      <div class="row" style="margin-top:5px;">
+        <span style="color :rgba(0,0,0,0)">....</span>
+        <img src="../img/position.png" style="height:18px; margin-top:2px; " /><span style="color :rgba(0,0,0,0)">.</span><span>重庆</span><span style="color :rgba(0,0,0,0)">....</span>
+        <span><img src="../img/female.png" style="height:18px; margin-top:-2px; " /></span><span style="color :rgba(0,0,0,0)">....</span>
+        <a><img src="../img/setBirthday.png" style="height:22px; margin-top:-2px; " /></a><span> </span><a>2019/07/01</a>
+
+      </div>
+    </div>
+    <div class="topDiv-right-bottom" style="margin-top:-5px;">这个人没有填简介啊~~</div>
+  </div>
+</div>
+<!--------------------------------------------------------------------------------------------------------------->
+<div class="contentDiv">
+  <a href="otherpageIndex.html">帖子</a>
+  <a href="#">相册</a>
+  <!--<div><a href="#">帖子</a></div>-->
+  <!--<div><a href="">相册</a></div>-->
+</div>
+<!-------------------------------------------------------------------------------------------------------------->
+<div class="setForPositionCenter" id="setForPositionCenter">
+  <div class="right-bottom">
+    <img src="../img/dog.jpg"  onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+
+  <div class="right-bottom">
+    <img src="../img/1.jpg" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+
+  <div class="right-bottom">
+    <img src="../img/2.jpg" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+
+  <div class="right-bottom">
+    <img src="../img/3.jpg" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+
+  <div class="right-bottom">
+    <img src="../img/4.jpg" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+
+  <div class="right-bottom">
+    <img src="../img/5.jpg" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+
+  <div class="right-bottom">
+    <img src="../img/6.jpg" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+
+
+  <div class="right-bottom">
+    <img src="../img/11.jpg" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+
+  <div class="right-bottom">
+    <img src="../img/paw.png" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+
+  <div class="right-bottom">
+    <img src="../img/32.png" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+
+  <div class="right-bottom">
+    <img src="../img/cat.jpg" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+
+  <div class="right-bottom">
+    <img src="../img/rat.jpg" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+
+  <div class="right-bottom">
+    <img src="../img/pet.png" class="petImg" onclick="changToBig(this)"/>
+    <span>2019/7/6</span>
+    <!--<input type="button" value="删除图片">-->
+  </div>
+</div>
+
+<div style="height: 50px;width: 100%;float: left;"></div>
+<div class="grayBgc" id="grayBgc" onclick="changToSmallT(this)"></div>
+<div class="displayForPic" id="displayForPic" onclick="changToSmall(this)">
+  <img class="phoPic" id="phoPic" src="http://localhost:63342/WSworkplace/19/img/dog.jpg" />
+</div>
+
+<div style="height: 50px;width: 100%;float: left;"></div>
+</body>
+</html>

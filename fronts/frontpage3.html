@@ -24,18 +24,18 @@
       padding:0;
     }
     #home{
-      position: fixed;
+      /*position: fixed;*/
       z-index: 999;
     }
     .px-lg-5{
-      position: fixed;
+      /*position: fixed;*/
       background-image: url(../img/1.jpg);
       background-size: cover;
       background-repeat: no-repeat;
     }
     .dispear{
       position: relative;
-      z-../index: -1;
+      z-index: -1;
     }
     .container{
       width: 960px;
@@ -45,9 +45,9 @@
     /*left*/
     .left {
       width: 270px;
-      margin-top: 180px;
-      /*float:left;*/
-      position: fixed;
+      margin-top: 50px;
+      float:left;
+      /*position: fixed;*/
       /*background-color: #05fffa;*/
     }
     .left ul li{
@@ -97,11 +97,17 @@
     .setTiezi{
       background-image: url("../img/setTiezi.png");
     }
+    .setPic{
+      background-image: url("../img/setPic.png");
+    }
     .setLogout{
       background-image: url("../img/setLogout.png");
     }
     .setCount{
       background-image: url("../img/setCount.png");
+    }
+    .setHead{
+      background-image: url("../img/setHead.png");
     }
     .setTxt{
       float:left;
@@ -114,7 +120,7 @@
     /*right*/
     .right{
       width: 640px;
-      margin-top: 180px;
+      margin-top: 50px;
       margin-right: 100px;
       /*background-color: #05fffa;*/
       float:right;
@@ -237,6 +243,13 @@
         </li>
 
         <li>
+          <a href="frontpageHead.html">
+            <div class="setIcon setHead"></div>
+            <span class="setTxt">我的头像</span>
+          </a>
+        </li>
+
+        <li>
           <a href="frontpage2.html">
             <div class="setIcon setCount"></div>
             <span class="setTxt">账号管理</span>
@@ -261,6 +274,13 @@
           <a href="frontpage5.html">
             <div class="setIcon setTiezi"></div>
             <span class="setTxt">我的帖子</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="frontpage7.html">
+            <div class="setIcon setPic"></div>
+            <span class="setTxt">我的相册</span>
           </a>
         </li>
 
@@ -481,50 +501,11 @@
         <!--</div>-->
         <!--<div style="text-align:center"><span class="page-header" style="text-align:center; color: #e2e2e2">___________________________________________________________________________________________________________________________________</span></div>-->
       <!--</div>-->
-
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
     </div>
   </div>
-
 </section>
 
-
-
-
+<div style="height: 50px;width: 100%;float: left;"></div>
 </body>
 
 </html>
